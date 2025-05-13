@@ -6,7 +6,6 @@
     --accent-color: #ff9a8b; /* Peach Accent */
 }
 
-
 body {
     background: url('../image/background.png') no-repeat center center fixed;
     background-size: cover;
@@ -33,6 +32,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
+
 .accessibility-toolbar .btn-group {
     display: flex;
     gap: 0.5rem;
