@@ -1,15 +1,15 @@
 :root {
-    --primary-color: #1a73e8;
-    --secondary-color: #f1f3f4;
-    --font-size-base: 16px;
+    --primary-color: #f37f74; /* Vibrant Coral */
+    --secondary-color: #ffcccb; /* Soft Pink */
+    --background-color: #fefefe; /* Light Background */
+    --text-color: #333333; /* Dark Gray */
+    --accent-color: #ff9a8b; /* Peach Accent */
 }
 
+
 body {
-    font-family: 'Roboto', sans-serif;
-    font-size: var(--font-size-base);
-    transition: all 0.5s ease;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    margin: 0;
+    background: url('../image/background.png') no-repeat center center fixed;
+    background-size: cover;
 }
 
 @keyframes fadeIn {

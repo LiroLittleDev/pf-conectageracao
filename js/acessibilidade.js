@@ -32,13 +32,17 @@ function decreaseFont() {
 }
 
 function toggleContrast() {
+  const root = document.documentElement;
+
   document.body.classList.toggle('high-contrast');
   if (document.body.classList.contains('high-contrast')) {
     document.body.style.background = '#000';
     document.body.style.color = '#fff';
+    root.style.setProperty('--primary-color', '#ffcc00'); // Cor primária para contraste
   } else {
-    document.body.style.background = 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)';
+    document.body.style.background = '';
     document.body.style.color = '';
+    root.style.setProperty('--primary-color', '#ff6f61'); // Cor primária original
   }
   updatePreferences();
 }
