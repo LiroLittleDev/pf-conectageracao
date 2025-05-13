@@ -8,25 +8,6 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="accessibility-toolbar">
-        <div class="btn-group">
-             <button class="btn btn-light m-1" onclick="ativarModoSimples()">Modo Simples</button>
-            <button class="btn btn-outline-primary m-1" onclick="increaseFont()">+ Texto</button>
-            <button class="btn btn-outline-primary m-1" onclick="decreaseFont()">- Texto</button>
-            <button class="btn btn-outline-primary m-1" onclick="toggleContrast()">Contraste</button>
-        </div>
-        <div class="dropdown">
-            <button class="accessibility-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                ⚙️
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end">
-                <li> <button class="btn btn-light m-1" onclick="ativarModoSimples()">Modo Simples</button>
-                <li><button class="dropdown-item" onclick="increaseFont()">+ Texto</button></li>
-                <li><button class="dropdown-item" onclick="decreaseFont()">- Texto</button></li>
-                <li><button class="dropdown-item" onclick="toggleContrast()">Contraste</button></li>
-            </ul>
-        </div>
-    </div>
 
     <main class="container my-5 animate-in">
         <div class="row justify-content-center">
@@ -52,11 +33,13 @@
         </div>
     </main>
 
-    <footer class="bg-dark text-white text-center p-4">
+    <footer class="bg-dark text-white text-center p-4 mt-auto">
         <p>© 2025 - Inclusão Digital para Todos</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/acessibilidade.js"></script>
+    <script src="js/toolbaracess.js"></script>
+    <script src="js/config.js"></script>
 </body>
 </html>

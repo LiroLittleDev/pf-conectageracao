@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perguntas Frequentes - Inclusão Digital</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container py-4">
+
+        <div class="accessibility-toolbar">
+        <!-- Botões para desktop -->
+        <div class="btn-group">
+            <button class="btn btn-light m-1" onclick="ativarModoSimples()">Modo Simples</button>
+            <button class="btn btn-light m-1" onclick="increaseFont()">+ Texto</button>
+            <button class="btn btn-light m-1" onclick="decreaseFont()">- Texto</button>
+            <button class="btn btn-light m-1" onclick="toggleContrast()">Tema Escuro</button>
+        </div>
+
+        <!-- Botões para mobile -->
+        <div class="dropdown">
+            <button class="accessibility-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                ⚙️
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li> <button class="btn btn-light m-1" onclick="ativarModoSimples()">Modo Simples</button>
+                <li><button class="dropdown-item" onclick="increaseFont()">+ Texto</button></li>
+                <li><button class="dropdown-item" onclick="decreaseFont()">- Texto</button></li>
+                <li><button class="dropdown-item" onclick="toggleContrast()">Tema Escuro</button></li>
+            </ul>
+        </div>
+    </div>
+
+  <h1 class="text-center mb-4">Perguntas Frequentes</h1>
+  <p class="text-center mx-auto" style="max-width:600px;">Aqui você encontra respostas simples para dúvidas comuns sobre o uso do site.</p>
+
+  <div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">
+          Como aumento o tamanho da letra?
+        </button>
+      </h2>
+      <div id="faq1" class="accordion-collapse collapse show">
+        <div class="accordion-body">
+          Clique no botão "A+ Texto" que aparece no canto superior da página.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+          Como escuto o que está escrito?
+        </button>
+      </h2>
+      <div id="faq2" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          Clique no botão com o ícone de som (🔊) ao lado dos textos. A leitura em voz alta vai começar automaticamente.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+          O que é o modo simples?
+        </button>
+      </h2>
+      <div id="faq3" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          É uma versão do site com menos cores e efeitos, pensada para facilitar a leitura e concentração.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+          Como volto para a tela inicial?
+        </button>
+      </h2>
+      <div id="faq4" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          Clique no botão "Início" ou no logo do site no topo da tela, se estiver visível.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+          Como entro na minha conta?
+        </button>
+      </h2>
+      <div id="faq5" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          Use o botão "Área de Login" na página principal e digite seu e-mail e senha cadastrados.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-4">
+    <a href="index.html" class="btn btn-primary">Voltar ao Início</a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/acessibilidade.js"></script>
+    <script src="js/toolbaracess.js"></script>
+</body>
+</html>
