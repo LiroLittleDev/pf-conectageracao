@@ -27,33 +27,42 @@ function decreaseFont() {
 
 function toggleContrast() {
   const root = document.documentElement;
+  const hero = document.querySelector('.hero-section');
 
   if (document.body.classList.contains('modo-simples')) {
     alert('O modo simples está ativado. Por favor, desative-o clicando no botão "Modo Simples" antes de ativar o contraste.');
     return;
   }
 
-  if (document.body.classList.contains('high-contrast')) {
+  const isActive = document.body.classList.contains('high-contrast');
+
+  if (isActive) {
+    // Desativa o modo contraste
     document.body.classList.remove('high-contrast');
-    mostrarAviso("Modo Contraste desativado!");
-    localStorage.removeItem('highContrast');
+    hero?.classList.remove('high-contrast-hero');
+
     document.body.style.background = '';
     document.body.style.color = '';
     root.style.setProperty('--primary-color', '#f08a81');
-    // Remove classe de contraste da hero-section
-    document.querySelector('.hero-section')?.classList.remove('high-contrast-hero');
+
+    localStorage.removeItem('highContrast');
+    mostrarAviso('Modo Contraste desativado!');
   } else {
+    // Ativa o modo contraste
     document.body.classList.add('high-contrast');
-    mostrarAviso("Modo Contraste ativado!");
+    hero?.classList.add('high-contrast-hero');
+
     document.body.style.background = '#535353';
     document.body.style.color = '#fff';
     root.style.setProperty('--primary-color', '#535353');
+
     localStorage.setItem('highContrast', 'true');
-    // Adiciona classe de contraste na hero-section
-    document.querySelector('.hero-section')?.classList.add('high-contrast-hero');
+    mostrarAviso('Modo Contraste ativado!');
   }
+
   updatePreferences();
 }
+
 
 function ativarModoSimples() {
   if (document.body.classList.contains('high-contrast')) {
@@ -61,19 +70,20 @@ function ativarModoSimples() {
     return;
   }
 
-  if (document.body.classList.contains('modo-simples')) {
-    document.body.classList.remove('modo-simples');
-    mostrarAviso("Modo Simples desativado!");
-    localStorage.removeItem('modoSimples');
-    // Remove classe de modo simples da hero-section
-    document.querySelector('.hero-section')?.classList.remove('modo-simples-hero');
-  } else {
-    document.body.classList.add('modo-simples');
-    mostrarAviso("Modo Simples ativado!");
-    localStorage.setItem('modoSimples', 'true');
-    // Adiciona classe de modo simples na hero-section
-    document.querySelector('.hero-section')?.classList.add('modo-simples-hero');
-  }
+    const hero = document.querySelector('.hero-section');
+
+  // Verifica se o modo simples já está ativado
+   if (document.body.classList.contains('modo-simples')) {
+        document.body.classList.remove('modo-simples');
+        hero?.classList.remove('modo-simples-hero');
+        mostrarAviso("Modo Simples desativado!");
+        localStorage.removeItem('modoSimples');
+    } else {
+        document.body.classList.add('modo-simples');
+        hero?.classList.add('modo-simples-hero');
+        mostrarAviso("Modo Simples ativado!");
+        localStorage.setItem('modoSimples', 'true');
+    }
 }
 
 function removerEmojis(texto) {

@@ -22,7 +22,7 @@ body {
 
 .accessibility-toolbar {
     position: fixed;
-    top: 5.1rem;
+    top: 122px;
     right: 1rem;
     z-index: 9999;
     background: rgba(255, 255, 255, 0.95);
@@ -97,9 +97,37 @@ body {
     }
 }
 
+/* Imagem do ícone (personagem, boneco, etc.) */
+.logo-icon {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Imagem do texto (Conectando Gerações) */
+.logo-text {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Ajuste responsivo opcional */
+@media (max-width: 576px) {
+    .logo-icon {
+        height: 80px;
+        padding-left: 190px;
+
+    }
+}
+@media (max-width: 576px) {
+    .logo-text {
+        height: 0px;
+    }
+}
+
+
 .hero-section {
-    background: linear-gradient(rgba(214, 187, 135, 0.92), rgba(236, 178, 176, 0.92)), url('../images/icon-CG.png') no-repeat center center;
-    background-size: cover;
+    background: linear-gradient(rgba(214, 187, 135, 0.92), rgba(236, 178, 176, 0.92));
     color: #fff;
     padding: 6rem 1.5rem 5rem 1.5rem;
     position: relative;
@@ -109,39 +137,28 @@ body {
     text-align: center;
 }
 
-.hero-section h1 {
-    font-size: clamp(2.2rem, 5vw + 1rem, 3.2rem);
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    color: #f5581a;
-    line-height: 1.1;
-    background: none;
-    -webkit-background-clip: unset;
-    -webkit-text-fill-color: unset;
-    background-clip: unset;
-    text-shadow: 0 4px 18px rgba(230,57,70,0.18), 0 1px 0 #fff4;
-    margin-bottom: 1.2rem;
-    word-break: break-word;
-    transition: color 0.3s, text-shadow 0.3s;
+/* Imagem da hero section no lugar do título */
+.logo-hero {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
-.hero-section {
-    background: linear-gradient(
-        rgba(214, 187, 135, 0.95), 
-        rgba(236, 178, 176, 0.95)
-      ),
-      url('../images/icon-transparente2.png') no-repeat center center;
-    background-size: cover;
-    color: #ffffff;
-    padding: 6rem 1.5rem 5rem 1.5rem;
-    position: relative;
-    overflow: hidden;
-    z-index: 10;
-    text-align: center;
+/* Responsivo (opcional) */
+@media (max-width: 576px) {
+    .logo-hero {
+        max-width: 320px;
+    }
+}
 
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #287eff;
+    text-shadow: 0 2px 16px rgba(255,204,203,0.12), 0 1px 0 #fff2;
 }
 
 .hero-section h1, .hero-section p {
@@ -149,9 +166,28 @@ body {
 }
 
 .hero-section .btn {
-    font-size: 1.15rem;
+    font-size: 1rem;
     font-weight: 600;
     margin-top: 0.5rem;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    color: #fff;
+    text-shadow: 0 2px 16px rgba(255,204,203,0.12), 0 1px 0 #fff2;
+}
+
+.container-footer{
+    background-color: #4e4744;
+    background-size: cover;
+    color: #fff;
+    padding: 2.5rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
 }
 
 .card {
@@ -195,12 +231,17 @@ body {
   100% { opacity: 0; transform: translateY(-20px); }
 }
 
-
-
+/* High Contrast Mode */
+/* Ao apertar o botao de contraste ocorrerá mudanças baseadas nas configurações abaixo sendo ID ou Class */
 
 .high-contrast {
     background-color: #000 !important;
     color: #fff !important;
+}
+
+/* Modo alto contraste para o botão hamburguer */
+.high-contrast .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .high-contrast a {
@@ -286,6 +327,47 @@ body {
     background: #222 !important;
     border: 2px solid #fff !important;
 }
+.high-contrast .container-footer {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+.high-contrast .container-footer a {
+    color: #ffe066 !important;
+    text-decoration: underline;
+}
+
+.high-contrast .container-footer hr {
+    border-color: #666 !important;
+}
+
+.high-contrast .login-card,
+.high-contrast .cadastro-card,
+.high-contrast .tutorial-card {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+    border: 1px solid #333 !important;
+}
+
+.high-contrast .login-btn,
+.high-contrast .cadastro-btn,
+.high-contrast .tutorial-btn {
+    background-color: #ffe066 !important;
+    color: #000 !important;
+    border: none !important;
+}
+
+.high-contrast .tutorial-header {
+    background-color: #111 !important;
+    color: #fff !important;
+}
+
+.high-contrast .tutorial-card-title,
+.high-contrast .tutorial-card-text {
+    color: #fff !important;
+}
+
+
 
 .modo-simples {
   background: linear-gradient(to bottom, #f7f7f7 0%, #eaeaea 100%) !important;
@@ -299,6 +381,56 @@ body {
   line-height: 1.75;
 }
 
+/* 🌤️ Navbar - Modo Simples */
+.modo-simples .navbar {
+    background-color: #f2f2f2 !important;
+    box-shadow: none !important;
+}
+
+.modo-simples .navbar .navbar-brand span {
+    color: #333 !important;
+}
+
+.modo-simples .navbar .nav-link {
+    color: #222 !important;
+    transition: color 0.3s ease;
+}
+.modo-simples .navbar {
+    background-color: #000 !important;
+}
+
+.modo-simples .bg-navbar {
+    background-color: #ffffff !important;
+    box-shadow: none !important;
+}
+
+.modo-simples .navbar .nav-link:hover,
+.modo-simples .navbar .nav-link.active {
+    color: #000 !important;
+    text-decoration: underline;
+}
+
+.modo-simples .navbar .btn-primary {
+    background-color: #d6d6d6 !important;
+    color: #000 !important;
+    border: 1px solid #999 !important;
+    transition: background-color 0.3s ease;
+}
+
+.modo-simples .navbar .btn-primary:hover {
+    background-color: #c4c4c4 !important;
+}
+
+.modo-simples .navbar-toggler {
+    background-color: #eaeaea !important;
+    border: 1px solid #999 !important;
+}
+
+.modo-simples .navbar-toggler-icon {
+    filter: brightness(0);
+}
+
+
 .modo-simples .hero-section {
   background-color: #e0e0e0 !important;
   color: #000 !important;
@@ -310,6 +442,10 @@ body {
   color: #000 !important;
   border: 1px solid #bbb !important;
   box-shadow: none !important;
+}
+
+.modo-simples .bg{
+ background-color: #000 !important;
 }
 
 .modo-simples .card {
@@ -347,4 +483,19 @@ body {
 .modo-simples-hero h1, .modo-simples-hero p {
     color: #222 !important;
     text-shadow: none !important;
+}
+
+.modo-simples .container-footer {
+    background-color: #eaeaea !important;
+    color: #222 !important;
+    box-shadow: none !important;
+}
+
+.modo-simples .container-footer a {
+    color: #333 !important;
+    text-decoration: underline;
+}
+
+.modo-simples .container-footer hr {
+    border-color: #ccc !important;
 }
