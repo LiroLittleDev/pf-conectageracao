@@ -3,24 +3,51 @@ function criarToolbarAcessibilidade() {
   toolbar.className = 'accessibility-toolbar';
 
   toolbar.innerHTML = `
-    <div class="btn-group toolbar-desktop">
-      <button id="btn-simples" class="btn btn-light m-1" onclick="ativarModoSimples()">Modo Simples</button>
-      <button class="btn btn-light m-1" onclick="increaseFont()">+ Texto</button>
-      <button class="btn btn-light m-1" onclick="decreaseFont()">- Texto</button>
-      <button id="btn-contraste" class="btn btn-light m-1" onclick="toggleContrast()">Contraste</button>
-    </div>
+<style>
+  .botao-img {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
 
-    <div class="dropdown toolbar-mobile">
-      <button class="accessibility-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        ⚙️
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end">
-        <li><button id="btn-simples-mobile" class="dropdown-item" onclick="ativarModoSimples()">Modo Simples</button></li>
-        <li><button class="dropdown-item" onclick="increaseFont()">+ Texto</button></li>
-        <li><button class="dropdown-item" onclick="decreaseFont()">- Texto</button></li>
-        <li><button id="btn-contraste-mobile" class="dropdown-item" onclick="toggleContrast()">Contraste</button></li>
-      </ul>
-    </div>
+  .botao-img:hover {
+    transform: scale(1.1);
+  }
+
+  /* Some toolbar no desktop se desejar separar (opcional) */
+  @media (min-width: 768px) {
+    .toolbar {
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+</style>
+<!-- Botão de abrir/fechar a toolbar, visível tanto no desktop quanto no mobile -->
+<button class="botao-img" onclick="toggleToolbar()">
+  <img src="images/icon-acessibilidade.png" alt="Acessibilidade" style="width: 60px; height: 50px;">
+</button>
+
+<!-- Toolbar compartilhada desktop e mobile -->
+<div id="toolbar" class="toolbar">
+  <button id="btn-simples" class="btn btn-light" onclick="ativarModoSimples()">Modo Simples</button>
+  <button class="btn btn-light" onclick="increaseFont()">+ Texto</button>
+  <button class="btn btn-light" onclick="decreaseFont()">- Texto</button>
+  <button id="btn-contraste" class="btn btn-light" onclick="toggleContrast()">Contraste</button>
+</div>
+
+<script>
+  function toggleToolbar() {
+    const toolbar = document.getElementById('toolbar');
+    if (toolbar.style.display === 'flex') {
+      toolbar.style.display = 'none';
+    } else {
+      toolbar.style.display = 'flex';
+    }
+  }
+</script>
+
   `;
 
   document.body.insertBefore(toolbar, document.body.firstChild);
@@ -28,7 +55,7 @@ function criarToolbarAcessibilidade() {
 }
 window.addEventListener('DOMContentLoaded', () => {
   criarToolbarAcessibilidade();
-  
+
   const nav = document.getElementById('navbar');
   if (nav) {
     nav.insertAdjacentElement('afterend', document.querySelector('.accessibility-toolbar'));
@@ -41,44 +68,53 @@ function atualizarEstadoBotoes() {
   const btnContraste = document.getElementById('btn-contraste');
   const btnContrasteMobile = document.getElementById('btn-contraste-mobile');
 
+  // Estado do botão Modo Simples
   if (document.body.classList.contains('modo-simples')) {
-    btnSimples.classList.add('active');
-    btnSimplesMobile.classList.add('active');
+    btnSimples?.classList.add('active');
+    btnSimplesMobile?.classList.add('active');
   } else {
-    btnSimples.classList.remove('active');
-    btnSimplesMobile.classList.remove('active');
+    btnSimples?.classList.remove('active');
+    btnSimplesMobile?.classList.remove('active');
   }
 
+  // Estado do botão Contraste
   if (document.body.classList.contains('high-contrast')) {
-    btnContraste.classList.add('active');
-    btnContrasteMobile.classList.add('active');
+    btnContraste?.classList.add('active');
+    btnContrasteMobile?.classList.add('active');
   } else {
-    btnContraste.classList.remove('active');
-    btnContrasteMobile.classList.remove('active');
+    btnContraste?.classList.remove('active');
+    btnContrasteMobile?.classList.remove('active');
   }
+}
+
+function toggleToolbar() {
+  const toolbar = document.getElementById('toolbar');
+  toolbar.classList.toggle('d-none');
 }
 
 
 
 
+
 (function criarBotaoAjuda() {
-  // Criar o botão
   const botao = document.createElement('button');
   botao.innerText = 'Ajuda';
-  botao.style.position = 'fixed';
-  botao.style.bottom = '20px';
-  botao.style.right = '20px';
-  botao.style.background = 'linear-gradient(135deg, #ff7f50 60%, #ffb347 100%)';
-  botao.style.color = 'white';
-  botao.style.border = 'none';
-  botao.style.borderRadius = '50px';
-  botao.style.padding = '15px 28px';
-  botao.style.fontSize = '20px';
-  botao.style.fontWeight = 'bold';
-  botao.style.cursor = 'pointer';
-  botao.style.boxShadow = '0 6px 16px rgba(0,0,0,0.25)';
-  botao.style.zIndex = '1000';
-  botao.style.transition = 'transform 0.2s, box-shadow 0.2s';
+  botao.style = `
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #ff7f50 60%, #ffb347 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 28px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    z-index: 1000;
+    transition: transform 0.2s, box-shadow 0.2s;
+  `;
 
   botao.addEventListener('mouseenter', () => {
     botao.style.transform = 'scale(1.08)';
@@ -89,26 +125,29 @@ function atualizarEstadoBotoes() {
     botao.style.boxShadow = '0 6px 16px rgba(0,0,0,0.25)';
   });
 
-  // Criar o menu
   const menu = document.createElement('div');
-  menu.style.position = 'fixed';
-  menu.style.bottom = '80px';
-  menu.style.right = '20px';
-  menu.style.background = 'white';
-  menu.style.border = '1px solid #ccc';
-  menu.style.borderRadius = '14px';
-  menu.style.boxShadow = '0 8px 24px rgba(0,0,0,0.18)';
-  menu.style.zIndex = '999';
-  menu.style.fontSize = '18px';
-  menu.style.display = 'none';
-  menu.style.minWidth = '210px';
-  menu.style.opacity = '0';
-  menu.style.transform = 'translateY(20px)';
-  menu.style.transition = 'opacity 0.25s, transform 0.25s';
+  menu.style = `
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    color: #222;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    z-index: 999;
+    font-size: 18px;
+    display: none;
+    min-width: 220px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.25s, transform 0.25s;
+  `;
 
   const opcoes = [
     { label: 'Dúvidas Frequentes', action: () => window.location.href = 'duvidas.html' },
-    { label: 'Fale Conosco', action: () => window.location.href = 'mailto:ConectandoGeracoes@gmail.com' }
+    { label: 'Fale Conosco', action: () => window.location.href = 'mailto:ConectandoGeracoes@gmail.com' },
+    { label: 'Resetar Configurações', action: () => { resetarConfiguracoes(); esconderMenu(); } }
   ];
 
   const ul = document.createElement('ul');
@@ -119,10 +158,12 @@ function atualizarEstadoBotoes() {
   opcoes.forEach((opcao, idx) => {
     const li = document.createElement('li');
     li.innerText = opcao.label;
-    li.style.padding = '12px 24px';
-    li.style.cursor = 'pointer';
-    li.style.borderBottom = idx < opcoes.length - 1 ? '1px solid #f2f2f2' : 'none';
-    li.style.transition = 'background 0.18s, color 0.18s';
+    li.style = `
+      padding: 12px 24px;
+      cursor: pointer;
+      ${idx < opcoes.length - 1 ? 'border-bottom: 1px solid #f2f2f2;' : ''}
+      transition: background 0.18s, color 0.18s;
+    `;
 
     li.addEventListener('mouseover', () => {
       li.style.background = '#ffecd2';
@@ -136,7 +177,6 @@ function atualizarEstadoBotoes() {
 
     li.addEventListener('click', () => {
       opcao.action();
-      esconderMenu();
     });
 
     ul.appendChild(li);
@@ -146,7 +186,6 @@ function atualizarEstadoBotoes() {
   document.body.appendChild(botao);
   document.body.appendChild(menu);
 
-  // Mostrar/ocultar menu com animação
   function mostrarMenu() {
     menu.style.display = 'block';
     setTimeout(() => {
@@ -154,6 +193,7 @@ function atualizarEstadoBotoes() {
       menu.style.transform = 'translateY(0)';
     }, 10);
   }
+
   function esconderMenu() {
     menu.style.opacity = '0';
     menu.style.transform = 'translateY(20px)';
@@ -171,7 +211,6 @@ function atualizarEstadoBotoes() {
     }
   });
 
-  // Ocultar menu ao clicar fora
   document.addEventListener('click', (e) => {
     if (!botao.contains(e.target) && !menu.contains(e.target)) {
       esconderMenu();

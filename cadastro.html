@@ -12,52 +12,68 @@
 
 <body class="cadastro-body">
 
-  <div class="cadastro-card">
+<div class="cadastro-card">
     <div class="text-center mb-4">
-      <img src="images/icon-transparente2.png" alt="Logo" class="cadastro-logo mb-2">
-      <h1 class="cadastro-title mb-0">Crie sua conta</h1>
-      <p class="cadastro-subtitle">Junte-se ao Conectando Gerações</p>
+        <img src="images/icon-transparente2.png" alt="Logo" class="cadastro-logo mb-2">
+        <h1 class="cadastro-title mb-0">Crie sua conta</h1>
+        <p class="cadastro-subtitle">Junte-se ao Conectando Gerações</p>
     </div>
 
-    <form class="cadastro-form">
-      <div class="mb-3">
-        <label for="nome" class="form-label fw-semibold">Nome completo</label>
-        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo" required />
-      </div>
+    <!-- Formulário para cadastro para backend -->
+    <form class="cadastro-form" action="cadastro.php" method="POST">
+        <div class="mb-3">
+            <label for="nome" class="form-label fw-semibold">Nome completo</label>
+            <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome completo" required />
+        </div>
 
-      <div class="mb-3">
-        <label for="email" class="form-label fw-semibold">E-mail</label>
-        <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required />
-      </div>
+        <div class="mb-3">
+            <label for="email" class="form-label fw-semibold">E-mail</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" required />
+        </div>
 
-      <div class="mb-3">
-        <label for="senha" class="form-label fw-semibold">Senha</label>
-        <input type="password" class="form-control" id="senha" placeholder="Crie uma senha" required />
-      </div>
+        <div class="mb-3">
+            <label for="cpf" class="form-label fw-semibold">CPF</label>
+            <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00" required />
+        </div>
 
-      <div class="mb-3">
-        <label for="confirmar-senha" class="form-label fw-semibold">Confirme sua senha</label>
-        <input type="password" class="form-control" id="confirmar-senha" placeholder="Digite a senha novamente" required />
-      </div>
+        <div class="mb-3">
+            <label for="telefone" class="form-label fw-semibold">Telefone</label>
+            <input type="text" class="form-control" id="telefone" name="telefone" placeholder="(00) 00000-0000" />
+        </div>
 
-      <div class="d-grid mb-3">
-        <button type="submit" class="btn cadastro-btn btn-lg">Cadastrar</button>
-      </div>
+        <div class="mb-3">
+            <label for="data_nascimento" class="form-label fw-semibold">Data de nascimento</label>
+            <input type="date" class="form-control" id="data_nascimento" name="data_nascimento" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="senha" class="form-label fw-semibold">Senha</label>
+            <input type="password" class="form-control" id="senha" name="senha" placeholder="Crie uma senha" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="confirmar-senha" class="form-label fw-semibold">Confirme sua senha</label>
+            <input type="password" class="form-control" id="confirmar-senha" placeholder="Digite a senha novamente" required />
+        </div>
+
+        <div class="d-grid mb-3">
+            <button type="submit" class="btn cadastro-btn btn-lg">Cadastrar</button>
+        </div>
     </form>
 
     <div class="text-center">
-      <p class="cadastro-small mb-0">Já tem uma conta?
-        <a href="login.html" class="fw-semibold text-decoration-none">Entrar</a>
-      </p>
-      <a href="index.html" class="btn btn-outline-secondary btn-sm mt-3">← Voltar ao Início</a>
+        <p class="cadastro-small mb-0">Já tem uma conta?
+            <a href="login.html" class="fw-semibold text-decoration-none">Entrar</a>
+        </p>
+        <a href="index.html" class="btn btn-outline-primary btn-sm mt-3">← Voltar ao Início</a>
     </div>
-  </div>
+</div>
+
 
   
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/config.js"></script>
     <script src="js/acessibilidade.js"></script>
     <script src="js/toolbaracess.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/config.js"></script>
 </body>
 </html>

@@ -29,4 +29,5 @@ window.onload = () => {
         document.querySelector('.tutorial-body')?.classList.add('high-contrast');
         document.querySelector('.faq-body')?.classList.add('high-contrast');
     }
+     atualizarEstadoBotoes();
 };

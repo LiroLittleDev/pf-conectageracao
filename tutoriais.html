@@ -10,7 +10,47 @@
     <link rel="stylesheet" href="css/tutoriais.css" />
 </head>
 
-<body class="tutorial-body">
+<body class="tutorial-body">  
+
+  <nav class="navbar bg-navbar navbar-expand-lg navbar-light bg-navbar shadow-sm py-3">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="images/icon-nav.png" alt="Ícone do projeto" class="logo-icon">
+                <img src="images/logo-conectandogeracoescut.png" alt="Texto Conectando Gerações" class="logo-text">
+            </a>
+
+            <!-- Botão de menu mobile -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links do menu -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-lg-4 align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold active" aria-current="page" href="#">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="#objetivo-projeto">Objetivo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="#funcionalidades">Funcionalidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="tutoriais.html">Tutoriais</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="duvidas.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary fw-semibold px-4 ms-lg-2" href="cadastro.html">Cadastro</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
   <header class="tutorial-header">
     <h1>Tutoriais Práticos</h1>
@@ -110,12 +150,10 @@
   <div class="text-center mb-5">
     <a href="index.html" class="btn btn-outline-secondary">← Voltar ao Início</a>
   </div>
-
-    <script src="js/config.js"></script>
     <script src="js/acessibilidade.js"></script>
     <script src="js/toolbaracess.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/config.js"></script>
 
-</body>
 </body>
 </html>

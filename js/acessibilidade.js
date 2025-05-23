@@ -1,29 +1,42 @@
-let fontSize = parseInt(getComputedStyle(document.body).fontSize);
+
+let fontSize = parseInt(localStorage.getItem('fontSize')) || 16;
 
 function updatePreferences() {
   localStorage.setItem('fontSize', fontSize);
   localStorage.setItem('highContrast', document.body.classList.contains('high-contrast'));
 }
+// Ao carregar a página, aplica o tamanho salvo
+window.onload = () => {
+  applyFontSize();
+};
 
+// Função para aplicar o tamanho em todos os elementos
+function applyFontSize() {
+  document.querySelectorAll('p')
+    .forEach(el => el.style.fontSize = fontSize + 'px');
+}
+
+// Aumentar fonte
 function increaseFont() {
-  if (fontSize < 30) {
+  if (fontSize < 28) {
     fontSize += 2;
-    document.body.style.fontSize = fontSize + "px";
-    mostrarAviso("Fonte Aumentada!")
-    updatePreferences();
+    updatePreferences()
+    applyFontSize();
+    localStorage.setItem('fontSize', fontSize);
+    mostrarAviso("Fonte Aumentada!");
   }
 }
 
+// Diminuir fonte
 function decreaseFont() {
   if (fontSize > 12) {
     fontSize -= 2;
-    document.body.style.fontSize = fontSize + "px";
+    updatePreferences()
+    applyFontSize();
+    localStorage.setItem('fontSize', fontSize);
     mostrarAviso("Fonte Diminuída!");
-    updatePreferences();
   }
 }
-
-// Atualização: garantir que a hero-section funcione com contraste e modo simples
 
 function toggleContrast() {
   const root = document.documentElement;
@@ -59,10 +72,7 @@ function toggleContrast() {
     localStorage.setItem('highContrast', 'true');
     mostrarAviso('Modo Contraste ativado!');
   }
-
-  updatePreferences();
   atualizarEstadoBotoes();
-
 }
 
 
@@ -90,11 +100,29 @@ function ativarModoSimples() {
 
 }
 
-function removerEmojis(texto) {
-  return texto.replace(
-    /([\u2700-\u27BF]|[\uE000-\uF8FF]|[\uD83C-\uDBFF\uDC00-\uDFFF]|\uFE0F|\u200D)/g,
-    ""
-  );
+function resetarConfiguracoes() {
+    // Remove classes do body
+    document.body.classList.remove('high-contrast');
+    document.body.classList.remove('modo-simples');
+
+    // Remove classes específicas de seções, se tiver
+    document.querySelector('.hero-section')?.classList.remove('high-contrast-hero', 'modo-simples-hero');
+
+    // Resetar fonte
+    fontSize = 16;
+    applyFontSize();
+
+    // Limpar localStorage
+    localStorage.removeItem('highContrast');
+    localStorage.removeItem('modoSimples');
+    localStorage.removeItem('fontSize');
+
+    // Resetar estilos inline
+    document.body.style.background = '';
+    document.body.style.color = '';
+    document.documentElement.style.setProperty('--primary-color', '#f08a81');
+
+    mostrarAviso('Configurações Redefinidas!');
 }
 
 function lerTexto(selector) {

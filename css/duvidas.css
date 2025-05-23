@@ -7,20 +7,20 @@ body.faq-body {
 
 .faq-header {
     background: linear-gradient(to right, #f7d8d0, #f9c6c5);
-    padding: 2.5rem 1rem;
+    padding: 2rem 1rem;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
 }
 
 .faq-header h1 {
     color: #f5581a;
-    font-weight: 700;
+    font-size: rem;
 }
 
 .faq-box {
     background-color: #fff;
     border-radius: 16px;
-    padding: 2rem;
+    padding: 3rem;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
@@ -92,7 +92,5 @@ body.modo-simples .accordion-button:not(.collapsed) {
     background-color: #4e4744;
     color: #fff;
     padding: 2rem 1.5rem;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
     text-align: center;
 }
