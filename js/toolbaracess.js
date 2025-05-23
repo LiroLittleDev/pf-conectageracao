@@ -4,6 +4,11 @@ function criarToolbarAcessibilidade() {
 
   toolbar.innerHTML = `
 <style>
+  .toolbar-container {
+    display: flex;
+    align-items: center;
+  }
+
   .botao-img {
     background: none;
     border: none;
@@ -16,37 +21,60 @@ function criarToolbarAcessibilidade() {
     transform: scale(1.1);
   }
 
-  /* Some toolbar no desktop se desejar separar (opcional) */
-  @media (min-width: 768px) {
+  .toolbar button {
+    white-space: nowrap;
+  }
+
+  @media (min-width: 420.98px) {
+    .toolbar-container {
+      right: 10px;
+      bottom: 10px;
+      flex-wrap: wrap;
+    }
+  }
+      @media (max-width: 767.98px) {
+    .toolbar-container {
+      bottom: 10px;
+      right: 10px;
+      flex-direction: column;
+      align-items: flex-end;
+      padding: 1px;
+    }
+
     .toolbar {
-      bottom: 20px;
-      right: 20px;
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+    }
+
+     .botao-img {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.2s;
+  
+
+    .toolbar button {
+      width: 60%;
     }
   }
 </style>
-<!-- Botão de abrir/fechar a toolbar, visível tanto no desktop quanto no mobile -->
-<button class="botao-img" onclick="toggleToolbar()">
-  <img src="images/icon-acessibilidade.png" alt="Acessibilidade" style="width: 60px; height: 50px;">
-</button>
 
-<!-- Toolbar compartilhada desktop e mobile -->
-<div id="toolbar" class="toolbar">
-  <button id="btn-simples" class="btn btn-light" onclick="ativarModoSimples()">Modo Simples</button>
-  <button class="btn btn-light" onclick="increaseFont()">+ Texto</button>
-  <button class="btn btn-light" onclick="decreaseFont()">- Texto</button>
-  <button id="btn-contraste" class="btn btn-light" onclick="toggleContrast()">Contraste</button>
+<div class="toolbar-container">
+  <!-- Botão com imagem -->
+  <button class="botao-img" onclick="toggleToolbar()">
+    <img src="images/icon-acessibilidade.png" alt="Acessibilidade" style="width: 60px; height: 50px;">
+  </button>
+
+  <!-- Toolbar botões -->
+  <div id="toolbar" class="toolbar">
+    <button id="btn-simples" class="btn btn-light" onclick="ativarModoSimples()">Modo Simples</button>
+    <button class="btn btn-light" onclick="increaseFont()">+ Texto</button>
+    <button class="btn btn-light" onclick="decreaseFont()">- Texto</button>
+    <button id="btn-contraste" class="btn btn-light" onclick="toggleContrast()">Contraste</button>
+  </div>
 </div>
-
-<script>
-  function toggleToolbar() {
-    const toolbar = document.getElementById('toolbar');
-    if (toolbar.style.display === 'flex') {
-      toolbar.style.display = 'none';
-    } else {
-      toolbar.style.display = 'flex';
-    }
-  }
-</script>
 
   `;
 
@@ -88,8 +116,18 @@ function atualizarEstadoBotoes() {
 }
 
 function toggleToolbar() {
-  const toolbar = document.getElementById('toolbar');
-  toolbar.classList.toggle('d-none');
+    const toolbar = document.getElementById('toolbar');
+    if (!toolbar) return;
+
+    const isVisible = toolbar.style.display === 'flex';
+
+    if (isVisible) {
+        toolbar.style.display = 'none';
+        localStorage.setItem('toolbar', 'fechado');
+    } else {
+        toolbar.style.display = 'flex';
+        localStorage.setItem('toolbar', 'aberto');
+    }
 }
 
 

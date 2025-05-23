@@ -1,33 +1,42 @@
 window.onload = () => {
-    const modoSimples = localStorage.getItem('modoSimples') === 'true';
-    const contraste = localStorage.getItem('highContrast') === 'true';
-    const fontSize = localStorage.getItem('fontSize');
+    const preferencias = {
+        modoSimples: localStorage.getItem('modoSimples') === 'true',
+        contraste: localStorage.getItem('highContrast') === 'true',
+        fontSize: localStorage.getItem('fontSize'),
+        toolbar: localStorage.getItem('toolbar')
+    };
 
-    // Se existir, ajusta tamanho de fonte
-    if (fontSize) {
-        document.body.style.fontSize = `${parseInt(fontSize)}px`;
+    const paginas = ['hero-section', 'login-body', 'cadastro-body', 'tutorial-body', 'faq-body'];
+
+    // ✔️ Aplica tamanho da fonte
+    if (preferencias.fontSize) {
+        document.body.style.fontSize = `${parseInt(preferencias.fontSize)}px`;
     }
 
-    // Aplica Modo Simples
-    if (modoSimples) {
-        document.body.classList.add('modo-simples');
-
-        document.querySelector('.hero-section')?.classList.add('modo-simples-hero');
-        document.querySelector('.login-body')?.classList.add('modo-simples');
-        document.querySelector('.cadastro-body')?.classList.add('modo-simples');
-        document.querySelector('.tutorial-body')?.classList.add('modo-simples');
-        document.querySelector('.faq-body')?.classList.add('modo-simples');
+    // ✔️ Função genérica para aplicar classes
+    function aplicarClasse(classeBody, classeExtra = '') {
+        document.body.classList.add(classeBody);
+        paginas.forEach(pagina => {
+            document.querySelector(`.${pagina}`)?.classList.add(`${classeBody}${classeExtra}`);
+        });
     }
 
-    // Aplica Modo Contraste
-    if (contraste) {
-        document.body.classList.add('high-contrast');
-
-        document.querySelector('.hero-section')?.classList.add('high-contrast-hero');
-        document.querySelector('.login-body')?.classList.add('high-contrast');
-        document.querySelector('.cadastro-body')?.classList.add('high-contrast');
-        document.querySelector('.tutorial-body')?.classList.add('high-contrast');
-        document.querySelector('.faq-body')?.classList.add('high-contrast');
+    // ✔️ Aplica Modo Simples
+    if (preferencias.modoSimples) {
+        aplicarClasse('modo-simples', '-hero');
     }
-     atualizarEstadoBotoes();
+
+    // ✔️ Aplica Modo Contraste
+    if (preferencias.contraste) {
+        aplicarClasse('high-contrast', '-hero');
+    }
+
+    // ✔️ Estado da Toolbar
+    const toolbar = document.getElementById('toolbar');
+    if (toolbar) {
+        toolbar.style.display = preferencias.toolbar === 'aberto' ? 'flex' : 'none';
+    }
+
+    atualizarEstadoBotoes();
 };
+

@@ -105,7 +105,7 @@ function resetarConfiguracoes() {
     document.body.classList.remove('high-contrast');
     document.body.classList.remove('modo-simples');
 
-    // Remove classes específicas de seções, se tiver
+    // Remove classes específicas de seções, se houver
     document.querySelector('.hero-section')?.classList.remove('high-contrast-hero', 'modo-simples-hero');
 
     // Resetar fonte
@@ -122,8 +122,15 @@ function resetarConfiguracoes() {
     document.body.style.color = '';
     document.documentElement.style.setProperty('--primary-color', '#f08a81');
 
+    // ✔️ Remove a marcação dos botões
+    document.getElementById('btn-contraste')?.classList.remove('active');
+    document.getElementById('btn-contraste-mobile')?.classList.remove('active');
+    document.getElementById('btn-simples')?.classList.remove('active');
+    document.getElementById('btn-simples-mobile')?.classList.remove('active');
+
     mostrarAviso('Configurações Redefinidas!');
 }
+
 
 function lerTexto(selector) {
   const element = document.querySelector(selector);
