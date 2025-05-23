@@ -1,96 +1,153 @@
- body.cadastro-body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #f7d8d0, #f9c6c5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      margin: 0;
-    }
+/* 🎨 Estilo Geral Cadastro */
+body.cadastro-body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f7d8d0, #f9c6c5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
 
-    .cadastro-card {
-      background-color: #fff;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      padding: 2.5rem;
-      max-width: 500px;
-      width: 100%;
-      animation: cadastroFadeIn 0.6s ease;
-    }
+.cadastro-card {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem;
+  max-width: 500px;
+  width: 100%;
+  animation: cadastroFadeIn 0.6s ease;
+}
 
-    .cadastro-logo {
-      width: 70px;
-    }
+.cadastro-logo {
+  width: 70px;
+}
 
-    .cadastro-title {
-      font-size: 1.8rem;
-      color: #f5581a;
-      font-weight: 700;
-    }
+.cadastro-title {
+  font-size: 1.8rem;
+  color: #f5581a;
+  font-weight: 700;
+}
 
-    .cadastro-subtitle {
-      color: #777;
-      font-size: 0.95rem;
-    }
+.cadastro-subtitle {
+  color: #777;
+  font-size: 0.95rem;
+}
 
-    .cadastro-form .form-control {
-      border-radius: 12px;
-    }
+.cadastro-form .form-control {
+  border-radius: 12px;
+}
 
-    .cadastro-form .form-control:focus {
-      border-color: #f5581a;
-      box-shadow: 0 0 0 0.2rem rgba(245, 88, 26, 0.2);
-    }
+.cadastro-form .form-control:focus {
+  border-color: #f5581a;
+  box-shadow: 0 0 0 0.2rem rgba(245, 88, 26, 0.2);
+}
 
-    .cadastro-btn {
-      background-color: #f5581a;
-      border: none;
-      border-radius: 12px;
-      font-weight: 600;
-    }
+.cadastro-btn {
+  background-color: #f5581a;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+}
 
-    .cadastro-btn:hover {
-      background-color: #d94c1a;
-    }
+.cadastro-btn:hover {
+  background-color: #d94c1a;
+}
 
-    .cadastro-small {
-      font-size: 0.9rem;
-    }
+.cadastro-small {
+  font-size: 0.9rem;
+}
 
-    @keyframes cadastroFadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(12px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+@keyframes cadastroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    /* High Contrast */
+/* 🔳 High Contrast Mode Cadastro */
+body.cadastro-body.high-contrast {
+  background-color: #000 !important;
+}
+
 .high-contrast .cadastro-card {
-    background-color: #121212 !important;
-    color: #fff !important;
-    border: 1px solid #333 !important;
+  background-color: #121212 !important;
+  color: #fff !important;
+  border: 1px solid #333 !important;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1) !important;
+}
+
+.high-contrast .cadastro-title {
+  color: #ffe066 !important;
+}
+
+.high-contrast .cadastro-subtitle {
+  color: #ccc !important;
+}
+
+.high-contrast .cadastro-form .form-control {
+  background-color: #000 !important;
+  color: #fff !important;
+  border: 1px solid #666 !important;
+}
+
+.high-contrast .cadastro-form .form-control:focus {
+  border-color: #ffe066 !important;
+  box-shadow: 0 0 0 0.2rem rgba(255, 224, 102, 0.3) !important;
 }
 
 .high-contrast .cadastro-btn {
-    background-color: #ffe066 !important;
-    color: #000 !important;
-    border: none !important;
+  background-color: #ffe066 !important;
+  color: #000 !important;
+  border: none !important;
 }
 
-/* Modo Simples */
+.high-contrast .cadastro-btn:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+/* 🌤️ Modo Simples Cadastro */
+body.cadastro-body.modo-simples {
+  background: linear-gradient(to bottom, #f7f7f7, #eaeaea) !important;
+}
+
 .modo-simples .cadastro-card {
-    background-color: #fff !important;
-    color: #000 !important;
-    border: 1px solid #ccc !important;
-    box-shadow: none !important;
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 1px solid #ccc !important;
+  box-shadow: none !important;
+}
+
+.modo-simples .cadastro-title {
+  color: #222 !important;
+}
+
+.modo-simples .cadastro-subtitle {
+  color: #444 !important;
+}
+
+.modo-simples .cadastro-form .form-control {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 1px solid #bbb !important;
+}
+
+.modo-simples .cadastro-form .form-control:focus {
+  border-color: #aaa !important;
+  box-shadow: none !important;
 }
 
 .modo-simples .cadastro-btn {
-    background-color: #ddd !important;
-    color: #000 !important;
-    border: 1px solid #aaa !important;
+  background-color: #ddd !important;
+  color: #000 !important;
+  border: 1px solid #aaa !important;
+}
+
+.modo-simples .cadastro-btn:hover {
+  background-color: #cfcfcf !important;
 }

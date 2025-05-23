@@ -1,0 +1,98 @@
+/* === FAQ Estilo === */
+body.faq-body {
+    background-color: #fffaf8;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.faq-header {
+    background: linear-gradient(to right, #f7d8d0, #f9c6c5);
+    padding: 2.5rem 1rem;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.faq-header h1 {
+    color: #f5581a;
+    font-weight: 700;
+}
+
+.faq-box {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #f5581a;
+    color: white;
+}
+
+/* === Acessibilidade - High Contrast === */
+body.high-contrast.faq-body {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+body.high-contrast .faq-header {
+    background-color: #222 !important;
+    background-image: none !important;
+}
+
+body.high-contrast .faq-box {
+    background-color: #121212 !important;
+    color: #fff !important;
+    border: 1px solid #333 !important;
+}
+
+body.high-contrast .accordion-button {
+    background-color: #121212 !important;
+    color: #fff !important;
+}
+
+body.high-contrast .accordion-button:not(.collapsed) {
+    background-color: #ffe066 !important;
+    color: #000 !important;
+}
+
+body.high-contrast a {
+    color: #ffe066 !important;
+    text-decoration: underline;
+}
+
+/* === Acessibilidade - Modo Simples === */
+body.modo-simples.faq-body {
+    background-color: #f2f2f2 !important;
+    color: #222 !important;
+}
+
+body.modo-simples .faq-header {
+    background-color: #e0e0e0 !important;
+    background-image: none !important;
+}
+
+body.modo-simples .faq-box {
+    background-color: #fff !important;
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+}
+
+body.modo-simples .accordion-button {
+    background-color: #fff !important;
+    color: #222 !important;
+}
+
+body.modo-simples .accordion-button:not(.collapsed) {
+    background-color: #d6d6d6 !important;
+    color: #000 !important;
+}
+
+.container-footer {
+    background-color: #4e4744;
+    color: #fff;
+    padding: 2rem 1.5rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+}

@@ -1,42 +1,62 @@
-
 function criarToolbarAcessibilidade() {
   const toolbar = document.createElement('div');
   toolbar.className = 'accessibility-toolbar';
 
   toolbar.innerHTML = `
-    <!-- Versão desktop -->
     <div class="btn-group toolbar-desktop">
-      <button class="btn btn-light m-1" onclick="ativarModoSimples()">Modo Simples</button>
+      <button id="btn-simples" class="btn btn-light m-1" onclick="ativarModoSimples()">Modo Simples</button>
       <button class="btn btn-light m-1" onclick="increaseFont()">+ Texto</button>
       <button class="btn btn-light m-1" onclick="decreaseFont()">- Texto</button>
-      <button class="btn btn-light m-1" onclick="toggleContrast()">Contraste</button>
+      <button id="btn-contraste" class="btn btn-light m-1" onclick="toggleContrast()">Contraste</button>
     </div>
 
-    <!-- Versão mobile -->
     <div class="dropdown toolbar-mobile">
       <button class="accessibility-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
         ⚙️
       </button>
       <ul class="dropdown-menu dropdown-menu-end">
-        <li><button class="dropdown-item" onclick="ativarModoSimples()">Modo Simples</button></li>
+        <li><button id="btn-simples-mobile" class="dropdown-item" onclick="ativarModoSimples()">Modo Simples</button></li>
         <li><button class="dropdown-item" onclick="increaseFont()">+ Texto</button></li>
         <li><button class="dropdown-item" onclick="decreaseFont()">- Texto</button></li>
-        <li><button class="dropdown-item" onclick="toggleContrast()">Contraste</button></li>
+        <li><button id="btn-contraste-mobile" class="dropdown-item" onclick="toggleContrast()">Contraste</button></li>
       </ul>
     </div>
   `;
 
   document.body.insertBefore(toolbar, document.body.firstChild);
+
 }
 window.addEventListener('DOMContentLoaded', () => {
   criarToolbarAcessibilidade();
-
+  
   const nav = document.getElementById('navbar');
   if (nav) {
     nav.insertAdjacentElement('afterend', document.querySelector('.accessibility-toolbar'));
   }
 });
 
+function atualizarEstadoBotoes() {
+  const btnSimples = document.getElementById('btn-simples');
+  const btnSimplesMobile = document.getElementById('btn-simples-mobile');
+  const btnContraste = document.getElementById('btn-contraste');
+  const btnContrasteMobile = document.getElementById('btn-contraste-mobile');
+
+  if (document.body.classList.contains('modo-simples')) {
+    btnSimples.classList.add('active');
+    btnSimplesMobile.classList.add('active');
+  } else {
+    btnSimples.classList.remove('active');
+    btnSimplesMobile.classList.remove('active');
+  }
+
+  if (document.body.classList.contains('high-contrast')) {
+    btnContraste.classList.add('active');
+    btnContrasteMobile.classList.add('active');
+  } else {
+    btnContraste.classList.remove('active');
+    btnContrasteMobile.classList.remove('active');
+  }
+}
 
 
 
@@ -53,7 +73,7 @@ window.addEventListener('DOMContentLoaded', () => {
   botao.style.border = 'none';
   botao.style.borderRadius = '50px';
   botao.style.padding = '15px 28px';
-  botao.style.fontSize = '18px';
+  botao.style.fontSize = '20px';
   botao.style.fontWeight = 'bold';
   botao.style.cursor = 'pointer';
   botao.style.boxShadow = '0 6px 16px rgba(0,0,0,0.25)';
@@ -79,6 +99,7 @@ window.addEventListener('DOMContentLoaded', () => {
   menu.style.borderRadius = '14px';
   menu.style.boxShadow = '0 8px 24px rgba(0,0,0,0.18)';
   menu.style.zIndex = '999';
+  menu.style.fontSize = '18px';
   menu.style.display = 'none';
   menu.style.minWidth = '210px';
   menu.style.opacity = '0';

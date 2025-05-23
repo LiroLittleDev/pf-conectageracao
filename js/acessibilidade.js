@@ -61,6 +61,8 @@ function toggleContrast() {
   }
 
   updatePreferences();
+  atualizarEstadoBotoes();
+
 }
 
 
@@ -84,6 +86,8 @@ function ativarModoSimples() {
         mostrarAviso("Modo Simples ativado!");
         localStorage.setItem('modoSimples', 'true');
     }
+    atualizarEstadoBotoes();
+
 }
 
 function removerEmojis(texto) {

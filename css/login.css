@@ -1,103 +1,181 @@
-    * {
-      font-family: 'Poppins', sans-serif;
-    }
+/* 🖼️ Estilo Geral Login */
+* {
+  font-family: 'Poppins', sans-serif;
+}
 
-    body.login-body {
-      background: linear-gradient(135deg, #ffe3d5, #f9c6c5);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0;
-    }
+body.login-body {
+  background: linear-gradient(135deg, #ffe3d5, #f9c6c5);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
 
-    .login-box {
-      background-color: #fff;
-      border-radius: 20px;
-      padding: 2.5rem;
-      max-width: 420px;
-      width: 100%;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-      animation: loginFade 0.6s ease;
-    }
+.login-box {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 2.5rem;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  animation: loginFade 0.6s ease;
+}
 
-    .login-logo {
-      width: 72px;
-    }
+.login-logo {
+  width: 72px;
+}
 
-    .login-title {
-      font-size: 1.8rem;
-      color: #f5581a;
-      font-weight: 700;
-    }
+.login-title {
+  font-size: 1.8rem;
+  color: #f5581a;
+  font-weight: 700;
+}
 
-    .login-subtitle {
-      font-size: 0.95rem;
-      color: #6c757d;
-    }
+.login-subtitle {
+  font-size: 0.95rem;
+  color: #6c757d;
+}
 
-    .login-form .form-control {
-      border-radius: 10px;
-    }
+.login-form .form-control {
+  border-radius: 10px;
+}
 
-    .login-form .form-control:focus {
-      border-color: #f5581a;
-      box-shadow: 0 0 0 0.2rem rgba(245, 88, 26, 0.25);
-    }
+.login-form .form-control:focus {
+  border-color: #f5581a;
+  box-shadow: 0 0 0 0.2rem rgba(245, 88, 26, 0.25);
+}
 
-    .login-btn {
-      background-color: #f5581a;
-      border: none;
-      border-radius: 10px;
-      font-weight: 600;
-    }
+.login-btn {
+  background-color: #f5581a;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+}
 
-    .login-btn:hover {
-      background-color: #d94c1a;
-    }
+.login-btn:hover {
+  background-color: #d94c1a;
+}
 
-    .login-outline-btn {
-      border-radius: 10px;
-    }
+.login-outline-btn {
+  border-radius: 10px;
+}
 
-    .login-small {
-      font-size: 0.9rem;
-    }
+.login-small {
+  font-size: 0.9rem;
+}
 
-    @keyframes loginFade {
-      from {
-        opacity: 0;
-        transform: translateY(10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+@keyframes loginFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    /* High Contrast */
-.high-contrast .login-card {
-    background-color: #121212 !important;
-    color: #fff !important;
-    border: 1px solid #333 !important;
+/* 🖤 High Contrast Mode Login */
+.high-contrast .login-body {
+  background-color: #000 !important;
+}
+
+.high-contrast .login-box {
+  background-color: #121212 !important;
+  color: #fff !important;
+  border: 1px solid #333 !important;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.15) !important;
+}
+
+.high-contrast .login-title {
+  color: #ffe066 !important;
+}
+
+.high-contrast .login-subtitle {
+  color: #ccc !important;
+}
+
+.high-contrast .form-control {
+  background-color: #000 !important;
+  color: #fff !important;
+  border: 1px solid #666 !important;
+}
+
+.high-contrast .form-control:focus {
+  border-color: #ffe066 !important;
+  box-shadow: 0 0 0 0.2rem rgba(255, 224, 102, 0.25) !important;
 }
 
 .high-contrast .login-btn {
-    background-color: #ffe066 !important;
-    color: #000 !important;
-    border: none !important;
+  background-color: #ffe066 !important;
+  color: #000 !important;
 }
 
-/* Modo Simples */
-.modo-simples .login-card {
-    background-color: #fff !important;
-    color: #000 !important;
-    border: 1px solid #ccc !important;
-    box-shadow: none !important;
+.high-contrast .login-btn:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.high-contrast .login-outline-btn {
+  background-color: transparent !important;
+  color: #ffe066 !important;
+  border: 1px solid #ffe066 !important;
+}
+
+.high-contrast .login-outline-btn:hover {
+  background-color: #ffe066 !important;
+  color: #000 !important;
+}
+
+/* 🌤️ Modo Simples Login */
+.modo-simples .login-body {
+  background: linear-gradient(to bottom, #f7f7f7, #eaeaea) !important;
+}
+
+.modo-simples .login-box {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 1px solid #ccc !important;
+  box-shadow: none !important;
+}
+
+.modo-simples .login-title {
+  color: #222 !important;
+}
+
+.modo-simples .login-subtitle {
+  color: #444 !important;
+}
+
+.modo-simples .form-control {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 1px solid #bbb !important;
+}
+
+.modo-simples .form-control:focus {
+  border-color: #aaa !important;
+  box-shadow: none !important;
 }
 
 .modo-simples .login-btn {
-    background-color: #ddd !important;
-    color: #000 !important;
-    border: 1px solid #aaa !important;
+  background-color: #ddd !important;
+  color: #000 !important;
+  border: 1px solid #aaa !important;
+}
+
+.modo-simples .login-btn:hover {
+  background-color: #cfcfcf !important;
+}
+
+.modo-simples .login-outline-btn {
+  background-color: transparent !important;
+  color: #000 !important;
+  border: 1px solid #999 !important;
+}
+
+.modo-simples .login-outline-btn:hover {
+  background-color: #ddd !important;
+  color: #000 !important;
 }
