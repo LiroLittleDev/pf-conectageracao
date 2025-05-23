@@ -79,6 +79,81 @@ body {
     }
 }
 
+
+.navbar {
+    background-color: #fff; /* Cor de fundo */
+    padding: 0.75rem 0;
+}
+
+.navbar-nav {
+    gap: 1rem;
+}
+
+.nav-link {
+    color: #333;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #007BFF;
+}
+
+.nav-link.active {
+    color: #007BFF;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.btn.btn-primary {
+    background-color: #007BFF;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/*==============================
+=      RESPONSIVIDADE          =
+==============================*/
+
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        padding: 1rem;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link,
+    .navbar-nav .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn.btn-primary {
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-nav {
+        align-items: center;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        padding: 0.5rem 0.75rem;
+    }
+}
+
 /* Imagem do ícone (personagem, boneco, etc.) */
 .logo-icon {
     height: 60px;
@@ -104,6 +179,7 @@ body {
         height: 0px;
     }
 }
+
 
 .hero-section {
     background: linear-gradient(rgba(214, 187, 135, 0.92), rgba(236, 178, 176, 0.92));
