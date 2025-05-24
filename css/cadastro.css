@@ -7,6 +7,7 @@ body.cadastro-body {
   justify-content: center;
   min-height: 100vh;
   margin: 0;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .cadastro-card {
@@ -17,6 +18,7 @@ body.cadastro-body {
   max-width: 500px;
   width: 100%;
   animation: cadastroFadeIn 0.6s ease;
+  transition: box-shadow 0.3s, background-color 0.3s;
 }
 
 .cadastro-logo {
@@ -48,10 +50,12 @@ body.cadastro-body {
   border: none;
   border-radius: 12px;
   font-weight: 600;
+  transition: background-color 0.2s, transform 0.2s;
 }
 
 .cadastro-btn:hover {
   background-color: #d94c1a;
+  transform: scale(1.02);
 }
 
 .cadastro-small {
@@ -69,16 +73,17 @@ body.cadastro-body {
   }
 }
 
-/* 🔳 High Contrast Mode Cadastro */
+/* 🔳 High Contrast Mode */
 body.cadastro-body.high-contrast {
   background-color: #000 !important;
+  color: #fff !important;
 }
 
 .high-contrast .cadastro-card {
   background-color: #121212 !important;
   color: #fff !important;
   border: 1px solid #333 !important;
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3) !important;
 }
 
 .high-contrast .cadastro-title {
@@ -97,13 +102,12 @@ body.cadastro-body.high-contrast {
 
 .high-contrast .cadastro-form .form-control:focus {
   border-color: #ffe066 !important;
-  box-shadow: 0 0 0 0.2rem rgba(255, 224, 102, 0.3) !important;
+  box-shadow: 0 0 0 0.2rem rgba(255, 224, 102, 0.4) !important;
 }
 
 .high-contrast .cadastro-btn {
   background-color: #ffe066 !important;
   color: #000 !important;
-  border: none !important;
 }
 
 .high-contrast .cadastro-btn:hover {
@@ -111,9 +115,10 @@ body.cadastro-body.high-contrast {
   color: #000 !important;
 }
 
-/* 🌤️ Modo Simples Cadastro */
+/* 🌤️ Modo Simples */
 body.cadastro-body.modo-simples {
-  background: linear-gradient(to bottom, #f7f7f7, #eaeaea) !important;
+  background-color: #f7f7f7 !important;
+  color: #000 !important;
 }
 
 .modo-simples .cadastro-card {
@@ -121,6 +126,7 @@ body.cadastro-body.modo-simples {
   color: #000 !important;
   border: 1px solid #ccc !important;
   box-shadow: none !important;
+  border-radius: 0 !important;
 }
 
 .modo-simples .cadastro-title {
@@ -139,7 +145,7 @@ body.cadastro-body.modo-simples {
 
 .modo-simples .cadastro-form .form-control:focus {
   border-color: #aaa !important;
-  box-shadow: none !important;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.1) !important; /* 🔥 Mantém foco visível */
 }
 
 .modo-simples .cadastro-btn {

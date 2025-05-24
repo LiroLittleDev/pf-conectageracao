@@ -100,6 +100,10 @@ body.tutorial-body.high-contrast {
   color: #ffe066 !important;
 }
 
+.high-contrast .tutorial-header h3 {
+  color: #ffffff !important;
+}
+
 .high-contrast .tutorial-header p {
   color: #ffffff !important;
 }

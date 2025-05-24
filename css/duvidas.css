@@ -48,6 +48,14 @@ body.high-contrast .faq-header {
     background-image: none !important;
 }
 
+body.high-contrast .faq-header h1 {
+    color: #ffe066 !important;
+}
+
+body.high-contrast .faq-header h3 {
+    color: #f7f7f7 !important;
+}
+
 body.high-contrast .faq-box {
     background-color: #121212 !important;
     color: #fff !important;

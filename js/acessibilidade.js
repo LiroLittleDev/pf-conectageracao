@@ -37,40 +37,48 @@ function decreaseFont() {
 
 
 function toggleContrast() {
-  const root = document.documentElement;
-  const hero = document.querySelector('.hero-section');
+    const root = document.documentElement;
 
-  if (document.body.classList.contains('modo-simples')) {
-    alert('O modo simples está ativado. Por favor, desative-o clicando no botão "Modo Simples" antes de ativar o contraste.');
-    return;
-  }
+    if (document.body.classList.contains('modo-simples')) {
+        alert('O modo simples está ativado. Por favor, desative-o antes de ativar o contraste.');
+        return;
+    }
 
-  const isActive = document.body.classList.contains('high-contrast');
+    const isActive = document.body.classList.contains('high-contrast');
 
-  if (isActive) {
-    // Desativa o modo contraste
-    document.body.classList.remove('high-contrast');
-    hero?.classList.remove('high-contrast-hero');
+    const paginas = ['hero-section', 'login-body', 'cadastro-body', 'tutorial-body', 'duvidas-body'];
 
-    document.body.style.background = '';
-    document.body.style.color = '';
-    root.style.setProperty('--primary-color', '#f08a81');
+    if (isActive) {
+        // 🔥 DESATIVA CONTRASTE
+        document.body.classList.remove('high-contrast');
 
-    localStorage.removeItem('highContrast');
-    mostrarAviso('Modo Contraste desativado!');
-  } else {
-    // Ativa o modo contraste
-    document.body.classList.add('high-contrast');
-    hero?.classList.add('high-contrast-hero');
+        paginas.forEach(pagina => {
+            document.querySelector(`.${pagina}`)?.classList.remove('high-contrast', 'high-contrast-hero');
+        });
 
-    document.body.style.background = '#535353';
-    document.body.style.color = '#fff';
-    root.style.setProperty('--primary-color', '#535353');
+        document.body.style.background = '';
+        document.body.style.color = '';
+        root.style.setProperty('--primary-color', '#f08a81');
 
-    localStorage.setItem('highContrast', 'true');
-    mostrarAviso('Modo Contraste ativado!');
-  }
-  atualizarEstadoBotoes();
+        localStorage.removeItem('highContrast');
+        mostrarAviso('Modo Contraste desativado!');
+    } else {
+        // 🔥 ATIVA CONTRASTE
+        document.body.classList.add('high-contrast');
+
+        paginas.forEach(pagina => {
+            document.querySelector(`.${pagina}`)?.classList.add('high-contrast', 'high-contrast-hero');
+        });
+
+        document.body.style.background = '#535353';
+        document.body.style.color = '#fff';
+        root.style.setProperty('--primary-color', '#535353');
+
+        localStorage.setItem('highContrast', 'true');
+        mostrarAviso('Modo Contraste ativado!');
+    }
+
+    atualizarEstadoBotoes();
 }
 
 
