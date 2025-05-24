@@ -1,159 +1,302 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tutoriais - Conectando Gerações</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="css/style.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutoriais - Conectando Gerações</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/tutoriais.css" />
-</head>
+  </head>
 
-<body class="tutorial-body">  
+  <body class="tutorial-body">
+    <nav class="navbar bg-navbar navbar-expand-lg navbar-light bg-navbar shadow-sm py-3">
+      <div class="container">
+        <!-- Logo -->
+        <a class="d-flex align-items-center gap-2" href="index.html">
+          <img
+            src="images/icon-nav.png"
+            alt="Ícone do projeto"
+            class="logo-icon"
+          />
+          <img
+            src="images/logo-conectandogeracoescut.png"
+            alt="Texto Conectando Gerações"
+            class="logo-text"
+          />
+        </a>
 
-  <nav class="navbar bg-navbar navbar-expand-lg navbar-light bg-navbar shadow-sm py-3">
-        <div class="container">
-            <!-- Logo -->
-            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-                <img src="images/icon-nav.png" alt="Ícone do projeto" class="logo-icon">
-                <img src="images/logo-conectandogeracoescut.png" alt="Texto Conectando Gerações" class="logo-text">
-            </a>
+        <!-- Botão de menu mobile -->
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Alternar navegação"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <!-- Botão de menu mobile -->
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Links do menu -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav gap-lg-4 align-items-lg-center">
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold active" aria-current="page" href="#">Início</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold" href="#objetivo-projeto">Objetivo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold" href="#funcionalidades">Funcionalidades</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold" href="tutoriais.html">Tutoriais</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold" href="duvidas.html">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-primary fw-semibold px-4 ms-lg-2" href="cadastro.html">Cadastro</a>
-                    </li>
-                </ul>
-            </div>
+        <!-- Links do menu -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav gap-lg-4 align-items-lg-center">
+            <li class="nav-item">
+              <a
+                class="nav-link fw-semibold"
+                aria-current="page"
+                href="index.html"
+                >Início</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="tutoriais.html"
+                >Tutoriais</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="duvidas.html">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-primary fw-semibold px-4 ms-lg-2" href="login.html"> Login </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="btn btn-primary fw-semibold px-4 ms-lg-2"
+                href="cadastro.html"
+                >Cadastro</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
-  <header class="tutorial-header">
-    <h1>Tutoriais Práticos</h1>
-    <p class="text-muted">Aprenda com facilidade. Clique no tutorial desejado para começar!</p>
-  </header>
+    <header class="tutorial-header">
+      <h1>Tutoriais Práticos</h1>
+      <h3 class="lead" >
+        Aprenda com facilidade. Clique no tutorial desejado para começar!
+      </h3>
+    </header>
 
-  <main class="container my-5">
-    <div class="row g-4">
+    <main class="container my-5">
+      <div class="row g-4">
+        <!-- Tutorial 1 -->
+        <div class="col-md-4">
+          <div class="card tutorial-card">
+            <img
+              src="images/tutorial/whatsapp-tuto.png"
+              class="card-img-top"
+              alt="Tutorial WhatsApp"
+            />
+            <div class="card-body">
+              <h5 class="card-title tutorial-card-title">
+                Como usar o WhatsApp
+              </h5>
+              <p class="card-text tutorial-card-text">
+                Aprenda a enviar mensagens, fazer chamadas e usar figurinhas no
+                WhatsApp.
+              </p>
+              <a href="#" class="btn tutorial-btn">Ver Tutorial</a>
+            </div>
+          </div>
+        </div>
 
-      <!-- Tutorial 1 -->
-      <div class="col-md-4">
-        <div class="card tutorial-card">
-          <img src="images/tutorial/whatsapp-tuto.png" class="card-img-top" alt="Tutorial WhatsApp">
-          <div class="card-body">
-            <h5 class="card-title tutorial-card-title">Como usar o WhatsApp</h5>
-            <p class="card-text tutorial-card-text">
-              Aprenda a enviar mensagens, fazer chamadas e usar figurinhas no WhatsApp.
-            </p>
-            <a href="#" class="btn tutorial-btn">Ver Tutorial</a>
+        <!-- Tutorial 2 -->
+        <div class="col-md-4">
+          <div class="card tutorial-card">
+            <img
+              src="images/tutorial/youtube-tuto.jpg"
+              class="card-img-top"
+              alt="Tutorial YouTube"
+            />
+            <div class="card-body">
+              <h5 class="card-title tutorial-card-title">
+                Como assistir vídeos no YouTube
+              </h5>
+              <p class="card-text tutorial-card-text">
+                Saiba como pesquisar vídeos, se inscrever em canais e ativar
+                legendas.
+              </p>
+              <a href="#" class="btn tutorial-btn">Ver Tutorial</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tutorial 3 -->
+        <div class="col-md-4">
+          <div class="card tutorial-card">
+            <img
+              src="images/tutorial/email-tuto.png"
+              class="card-img-top"
+              alt="Tutorial Email"
+            />
+            <div class="card-body">
+              <h5 class="card-title tutorial-card-title">
+                Como enviar e-mails
+              </h5>
+              <p class="card-text tutorial-card-text">
+                Aprenda a criar, enviar e responder e-mails de forma simples.
+              </p>
+              <a href="#" class="btn tutorial-btn">Ver Tutorial</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tutorial 4 -->
+        <div class="col-md-4">
+          <div class="card tutorial-card">
+            <img
+              src="images/tutorial/google-tuto.jpg"
+              class="card-img-top"
+              alt="Tutorial Google"
+            />
+            <div class="card-body">
+              <h5 class="card-title tutorial-card-title">
+                Como pesquisar no Google
+              </h5>
+              <p class="card-text tutorial-card-text">
+                Entenda como encontrar qualquer informação na internet.
+              </p>
+              <a href="#" class="btn tutorial-btn">Ver Tutorial</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tutorial 5 -->
+        <div class="col-md-4">
+          <div class="card tutorial-card">
+            <img
+              src="images/tutorial/foto-tuto.jpg"
+              class="card-img-top"
+              alt="Tutorial Fotos"
+            />
+            <div class="card-body">
+              <h5 class="card-title tutorial-card-title">
+                Como tirar e enviar fotos
+              </h5>
+              <p class="card-text tutorial-card-text">
+                Descubra como usar a câmera, tirar fotos e compartilhar com
+                amigos.
+              </p>
+              <a href="#" class="btn tutorial-btn">Ver Tutorial</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tutorial 6 -->
+        <div class="col-md-4">
+          <div class="card tutorial-card">
+            <img
+              src="images/tutorial/senha-tuto.png"
+              class="card-img-top"
+              alt="Tutorial Senhas"
+            />
+            <div class="card-body">
+              <h5 class="card-title tutorial-card-title">
+                Como criar senhas seguras
+              </h5>
+              <p class="card-text tutorial-card-text">
+                Dicas práticas para criar senhas fortes e proteger suas contas.
+              </p>
+              <a href="#" class="btn tutorial-btn">Ver Tutorial</a>
+            </div>
           </div>
         </div>
       </div>
+    </main>
 
-      <!-- Tutorial 2 -->
-      <div class="col-md-4">
-        <div class="card tutorial-card">
-          <img src="images/tutorial/youtube-tuto.jpg" class="card-img-top" alt="Tutorial YouTube">
-          <div class="card-body">
-            <h5 class="card-title tutorial-card-title">Como assistir vídeos no YouTube</h5>
-            <p class="card-text tutorial-card-text">
-              Saiba como pesquisar vídeos, se inscrever em canais e ativar legendas.
-            </p>
-            <a href="#" class="btn tutorial-btn">Ver Tutorial</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tutorial 3 -->
-      <div class="col-md-4">
-        <div class="card tutorial-card">
-          <img src="images/tutorial/email-tuto.png" class="card-img-top" alt="Tutorial Email">
-          <div class="card-body">
-            <h5 class="card-title tutorial-card-title">Como enviar e-mails</h5>
-            <p class="card-text tutorial-card-text">
-              Aprenda a criar, enviar e responder e-mails de forma simples.
-            </p>
-            <a href="#" class="btn tutorial-btn">Ver Tutorial</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tutorial 4 -->
-      <div class="col-md-4">
-        <div class="card tutorial-card">
-          <img src="images/tutorial/google-tuto.jpg" class="card-img-top" alt="Tutorial Google">
-          <div class="card-body">
-            <h5 class="card-title tutorial-card-title">Como pesquisar no Google</h5>
-            <p class="card-text tutorial-card-text">
-              Entenda como encontrar qualquer informação na internet.
-            </p>
-            <a href="#" class="btn tutorial-btn">Ver Tutorial</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tutorial 5 -->
-      <div class="col-md-4">
-        <div class="card tutorial-card">
-          <img src="images/tutorial/foto-tuto.jpg" class="card-img-top" alt="Tutorial Fotos">
-          <div class="card-body">
-            <h5 class="card-title tutorial-card-title">Como tirar e enviar fotos</h5>
-            <p class="card-text tutorial-card-text">
-              Descubra como usar a câmera, tirar fotos e compartilhar com amigos.
-            </p>
-            <a href="#" class="btn tutorial-btn">Ver Tutorial</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tutorial 6 -->
-      <div class="col-md-4">
-        <div class="card tutorial-card">
-          <img src="images/tutorial/senha-tuto.png" class="card-img-top" alt="Tutorial Senhas">
-          <div class="card-body">
-            <h5 class="card-title tutorial-card-title">Como criar senhas seguras</h5>
-            <p class="card-text tutorial-card-text">
-              Dicas práticas para criar senhas fortes e proteger suas contas.
-            </p>
-            <a href="#" class="btn tutorial-btn">Ver Tutorial</a>
-          </div>
-        </div>
-      </div>
-
+    <div class="text-center mb-5">
+      <a href="index.html" class="btn btn-primary btn-sm mt-3"
+        >← Voltar ao Início</a
+      >
     </div>
-  </main>
+    <footer class="container-footer">
+      <div class="container">
+        <div class="row">
+          <!-- Sobre -->
+          <div class="col-md-4 mb-4">
+            <h5 class="fw-bold">Conectando Gerações</h5>
+            <p class="small">
+              Projeto Interdisciplinar de Inclusão Digital.<br />
+              Promovendo acessibilidade, inclusão e conexão através da
+              tecnologia.
+            </p>
+          </div>
 
-  <div class="text-center mb-5">
-    <a href="index.html" class="btn btn-outline-secondary">← Voltar ao Início</a>
-  </div>
+          <!-- Links úteis -->
+          <div class="col-md-4 mb-4">
+            <h6 class="fw-bold mb-3">Navegação</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#" class="text-decoration-none text-light">Início</a>
+              </li>
+              <li class="mb-2">
+                <a href="#objetivo" class="text-decoration-none text-light"
+                  >Objetivo</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="#funcionalidades"
+                  class="text-decoration-none text-light"
+                  >Funcionalidades</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#conteudo" class="text-decoration-none text-light"
+                  >Conteúdo</a
+                >
+              </li>
+              <li>
+                <a href="duvidas.html" class="text-decoration-none text-light"
+                  >FAQ</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contato ou redes -->
+          <div class="col-md-4 mb-4">
+            <h6 class="fw-bold mb-3">Contato</h6>
+            <p class="small mb-1">Email: contato@conectandogeracoes.com</p>
+            <p class="small mb-3">Telefone: (99) 99999-9999</p>
+            <div>
+              <a href="#" class="text-light me-3">
+                <i class="bi bi-facebook"></i> Facebook
+              </a>
+              <a href="#" class="text-light me-3">
+                <i class="bi bi-instagram"></i> Instagram
+              </a>
+              <a href="#" class="text-light">
+                <i class="bi bi-whatsapp"></i> WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-secondary" />
+
+        <div class="text-center small">
+          © 2025 Conectando Gerações. Todos os direitos reservados.
+        </div>
+      </div>
+    </footer>
+
     <script src="js/acessibilidade.js"></script>
     <script src="js/toolbaracess.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/config.js"></script>
-
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

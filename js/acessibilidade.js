@@ -1,28 +1,26 @@
-
 let fontSize = parseInt(localStorage.getItem('fontSize')) || 16;
 
 function updatePreferences() {
   localStorage.setItem('fontSize', fontSize);
   localStorage.setItem('highContrast', document.body.classList.contains('high-contrast'));
+  localStorage.setItem('modoSimples', document.body.classList.contains('modo-simples'));
 }
-// Ao carregar a página, aplica o tamanho salvo
+
 window.onload = () => {
   applyFontSize();
 };
 
-// Função para aplicar o tamanho em todos os elementos
 function applyFontSize() {
-  document.querySelectorAll('p')
-    .forEach(el => el.style.fontSize = fontSize + 'px');
+  const elementos = document.querySelectorAll('p, h2');
+  elementos.forEach(el => el.style.fontSize = fontSize + 'px');
 }
 
 // Aumentar fonte
 function increaseFont() {
   if (fontSize < 28) {
     fontSize += 2;
-    updatePreferences()
+    updatePreferences();
     applyFontSize();
-    localStorage.setItem('fontSize', fontSize);
     mostrarAviso("Fonte Aumentada!");
   }
 }
@@ -31,12 +29,12 @@ function increaseFont() {
 function decreaseFont() {
   if (fontSize > 12) {
     fontSize -= 2;
-    updatePreferences()
+    updatePreferences();
     applyFontSize();
-    localStorage.setItem('fontSize', fontSize);
     mostrarAviso("Fonte Diminuída!");
   }
 }
+
 
 function toggleContrast() {
   const root = document.documentElement;
@@ -101,35 +99,41 @@ function ativarModoSimples() {
 }
 
 function resetarConfiguracoes() {
-    // Remove classes do body
-    document.body.classList.remove('high-contrast');
-    document.body.classList.remove('modo-simples');
+    const paginas = ['hero-section', 'login-body', 'cadastro-body', 'tutorial-body', 'faq-body'];
 
-    // Remove classes específicas de seções, se houver
-    document.querySelector('.hero-section')?.classList.remove('high-contrast-hero', 'modo-simples-hero');
+    // 🔥 Remove classes globais
+    document.body.classList.remove('high-contrast', 'modo-simples');
 
-    // Resetar fonte
+    // 🔥 Remove classes específicas de todas as páginas
+    paginas.forEach(pagina => {
+        document.querySelector(`.${pagina}`)?.classList.remove(
+            'high-contrast', 'high-contrast-hero', 'modo-simples', 'modo-simples-hero'
+        );
+    });
+
+    // 🔥 Resetar tamanho da fonte para o padrão
     fontSize = 16;
     applyFontSize();
+    document.body.style.fontSize = ''; // Remove inline residual
 
-    // Limpar localStorage
+    // 🔥 Limpa preferências do localStorage
     localStorage.removeItem('highContrast');
     localStorage.removeItem('modoSimples');
     localStorage.removeItem('fontSize');
+    localStorage.removeItem('toolbar');
 
-    // Resetar estilos inline
+    // 🔥 Reseta variáveis de CSS customizadas
     document.body.style.background = '';
     document.body.style.color = '';
     document.documentElement.style.setProperty('--primary-color', '#f08a81');
 
-    // ✔️ Remove a marcação dos botões
-    document.getElementById('btn-contraste')?.classList.remove('active');
-    document.getElementById('btn-contraste-mobile')?.classList.remove('active');
-    document.getElementById('btn-simples')?.classList.remove('active');
-    document.getElementById('btn-simples-mobile')?.classList.remove('active');
+    // 🔥 Remove marcação de botões ativos
+    document.querySelectorAll('.btn.active').forEach(btn => btn.classList.remove('active'));
 
     mostrarAviso('Configurações Redefinidas!');
 }
+
+
 
 
 function lerTexto(selector) {

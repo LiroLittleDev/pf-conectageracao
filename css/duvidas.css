@@ -6,15 +6,23 @@ body.faq-body {
 }
 
 .faq-header {
-    background: linear-gradient(to right, #f7d8d0, #f9c6c5);
-    padding: 2rem 1rem;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+  background: url("../images/hero-background.png") no-repeat center center fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  padding: 6rem 1.5rem 5rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+  box-shadow: 0 12px 40px rgba(240, 138, 129, 0.16);
+  text-align: center;
 }
 
 .faq-header h1 {
     color: #f5581a;
-    font-size: rem;
+    font-size: 3rem;
 }
 
 .faq-box {

@@ -1,220 +1,344 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inclusão Digital para Idosos</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="images/icon-transp-removebg-preview.png">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/icon-transp-removebg-preview.png"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar bg-navbar navbar-expand-lg navbar-light bg-navbar shadow-sm py-3"
+    >
+      <div class="container">
+        <!-- Logo -->
+        <a class="d-flex align-items-center gap-2" href="index.html">
+          <img
+            src="images/icon-nav.png"
+            alt="Ícone do projeto"
+            class="logo-icon"
+          />
+          <img
+            src="images/logo-conectandogeracoescut.png"
+            alt="Texto Conectando Gerações"
+            class="logo-text"
+          />
+        </a>
 
-    <nav class="navbar bg-navbar navbar-expand-lg navbar-light bg-navbar shadow-sm py-3">
-        <div class="container">
-            <!-- Logo -->
-            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-                <img src="images/icon-nav.png" alt="Ícone do projeto" class="logo-icon">
-                <img src="images/logo-conectandogeracoescut.png" alt="Texto Conectando Gerações" class="logo-text">
-            </a>
+        <!-- Botão de menu mobile -->
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Alternar navegação"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <!-- Botão de menu mobile -->
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Links do menu -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav gap-lg-4 align-items-lg-center">
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold active" aria-current="page" href="index.html">Início</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold" href="tutoriais.html">Tutoriais</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold" href="duvidas.html">Duvidas Frequentes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-primary btn-sm" href="login.html">
-                            Login
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-primary btn-sm" href="cadastro.html">
-                            Cadastro
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
+        <!-- Links do menu -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav gap-lg-4 align-items-lg-center">
+            <li class="nav-item">
+              <a
+                class="nav-link fw-semibold"
+                aria-current="page"
+                href="index.html"
+                >Início</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="tutoriais.html"
+                >Tutoriais</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="duvidas.html"
+                >Duvidas Frequentes</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-primary fw-semibold px-4 ms-lg-2" href="login.html"> Login </a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-primary fw-semibold px-4 ms-lg-2" href="cadastro.html">
+                Cadastro
+              </a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <header class="hero-section">
-        <div class="container text-center">
+      <div class="container text-center">
+        <!-- Imagem no lugar do h1 -->
+        <img
+          src="images/logo-conectandogeracoes.png"
+          alt="Conectando Gerações"
+          class="img-fluid animate-in logo-hero"
+          style="animation-delay: 0s; max-width: 500px"
+        />
 
-            <!-- Imagem no lugar do h1 -->
-            <img src="images/logo-conectandogeracoes.png" alt="Conectando Gerações"
-                class="img-fluid animate-in logo-hero" style="animation-delay: 0s; max-width: 500px;">
+        <h1
+          class="lead animate-in"
+          style="animation-delay: 0.2s; max-width: 600px; margin: 0 auto"
+          id="subtitulo-principal">
+          Tornamos a tecnologia mais humana, acessível e intuitiva, conectando
+          gerações e criando oportunidades para quem busca autonomia no universo
+          digital.
+        </h1>
 
-            <p class="lead animate-in" style="animation-delay: 0.2s; max-width: 600px; margin: 0 auto;"
-                id="subtitulo-principal">
-                Aproximando pessoas e promovendo inclusão digital por meio da tecnologia
-            </p>
-
-            <div class="d-flex justify-content-center gap-3 mt-4 animate-in flex-wrap" style="animation-delay: 0.4s;">
-                <a href="tutoriais.html" class="btn btn-primary btn-lg">Veja como funciona</a>
-                <a href="login.html" class="btn btn-primary btn-lg">Área de Login</a>
-            </div>
+        <div
+          class="d-flex justify-content-center gap-3 mt-4 animate-in flex-wrap"
+          style="animation-delay: 0.4s"
+        >
+          <a href="tutoriais.html" class="btn btn-primary btn-lg"
+            >Veja como funciona</a
+          >
+          <a href="login.html" class="btn btn-primary btn-lg">Área de Login</a>
         </div>
+      </div>
     </header>
 
     <main class="container my-5" id="conteudo">
-        <section class="mt-5 px-3 text-center animate-in" id="objetivo-projeto">
-            <h2 class="mb-3">Objetivo do Projeto
-                <button class="btn btn-sm btn-outline-secondary ms-2"
-                    onclick="lerTexto('#objetivo-projeto')">🔊</button>
-            </h2>
-            <p class="mx-auto" style="max-width: 800px;">
-                Nosso objetivo é facilitar o acesso à tecnologia para idosos, promovendo a inclusão digital por meio de
-                um
-                site intuitivo, acessível e adaptado às suas necessidades, garantindo uma experiência agradável e
-                eficiente.
-            </p>
-        </section>
-
-        <section class="mt-5 d-flex flex-column align-items-center" id="funcionalidades">
-            <h2 class="text-center mb-4 animate-in" id="funcionalidades-titulo">
-                Funcionalidades do Site
-                <button class="btn btn-sm btn-outline-secondary ms-2"
-                    onclick="lerTexto('#funcionalidades-titulo')">🔊</button>
-            </h2>
-            <div class="row justify-content-center text-center mx-3">
-                <div class="col-md-4 mb-3">
-                    <div class="card p-3 animate-in">
-                        <img src="images/idosoouvid.png" alt="Ícone de leitura de texto" class="img-fluid mb-3">
-                        <p>Ative o recurso de leitura em voz alta para ouvir o conteúdo do site de forma clara e
-                            prática.
-                        </p>
-                    </div>
+      <section class="text-center animate-in row align-items-center" id="objetivo-projeto">
+        
                 </div>
-
-                <div class="col-md-4 mb-3">
-                    <div class="card p-3 animate-in">
-                        <img src="images/idososimples.png" alt="Ícone de modo simples" class="img-fluid mb-3">
-                        <p>Ative o Modo Simples para uma interface mais limpa de cores fortes e animações.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-3">
-                    <div class="card p-3 animate-in">
-                        <img src="images/idosa-dina.png" alt="Ícone de contraste e fonte" class="img-fluid mb-3">
-                        <p>Personalize a aparência do site ajustando o contraste e o tamanho da fonte para uma
-                            experiência
-                            mais confortável.</p>
-                    </div>
-                </div>
+                    <div class="col-md-4 mb-3">
+            <div class="card p-3 animate-in">
+              <img
+                src="images/prof-explain.png"
+                alt="Ícone de contraste e fonte"
+                class="img-fluid mb-3"/>
+              <p>
+                O site Conectando Gerações é uma ferramenta incrível! Ideal para
+                quem quer aprender a usar a tecnologia de forma simples e eficaz.
+                Ele é perfeito para idosos que desejam se conectar com seus familiares
+                e amigos, além de facilitar o acesso a informações e serviços online.
+              </p>
             </div>
-        </section>
+          </div>
 
-        <section class="row align-items-center">
-            <div class="col-md-6 animate-in" id="porque-utilizar">
-                <h2>Por que utilizar o site Conectando Gerações é bom?
-                    <button class="btn btn-sm btn-outline-secondary ms-2"
-                        onclick="lerTexto('#porque-utilizar')">🔊</button>
-                </h2>
-                <ul class="list-unstyled">
-                    <li class="mb-3">🌟 Interface simples e intuitiva, ideal para iniciantes. O design do site foi
-                        pensado para ser fácil de navegar, com botões grandes e menus claros, garantindo que qualquer
-                        pessoa, independentemente de sua experiência com tecnologia, consiga utilizá-lo sem
-                        dificuldades.</li>
-                    <li class="mb-3">📚 Recursos educativos para aprender no seu ritmo. Oferecemos tutoriais passo a
-                        passo e dicas práticas que permitem que os usuários aprendam de forma tranquila e sem pressa,
-                        respeitando o tempo de cada um.</li>
-                    <li class="mb-3">🤝 Promove a inclusão digital e a conexão entre gerações. O site incentiva a
-                        interação entre jovens e idosos, criando oportunidades para que compartilhem experiências e
-                        aprendam juntos, fortalecendo os laços familiares e sociais.</li>
-                </ul>
+        <div class=" col-md-6 animate-in">
+          <h2 class="mb-3">
+            Objetivo do Projeto
+            <button
+              class="btn btn-sm btn-secondary ms-2"
+              onclick="lerTexto('#objetivo-projeto')">
+              🔊
+            </button>
+          </h2>
+          <p class="mx-auto" style="max-width: 800px">
+          O projeto “Conectando Gerações” tem como objetivo promover a inclusão digital de idosos, oferecendo um ambiente acessível, simples e intuitivo. Buscamos facilitar o aprendizado no uso de tecnologias, como smartphones, redes sociais e serviços online, tornando os idosos mais autônomos e conectados. Além disso, fortalecemos a interação entre gerações, criando oportunidades para troca de experiências, aprendizado e inclusão social.
+          </p>
+      </section>
+
+      <section
+        class="mt-5 d-flex flex-column align-items-center"
+        id="funcionalidades"
+      >
+        <h2 class="text-center mb-4 animate-in" id="funcionalidades-titulo">
+          Funcionalidades do Site
+          <button
+            class="btn btn-sm btn-outline-secondary ms-2"
+            onclick="lerTexto('#funcionalidades-titulo')"
+          >
+            🔊
+          </button>
+        </h2>
+        <div class="row justify-content-center text-center mx-3">
+          <div class="col-md-4 mb-3">
+            <div class="card p-3 animate-in">
+              <img
+                src="images/idosoouvid.png"
+                alt="Ícone de leitura de texto"
+                class="img-fluid mb-3"
+              />
+              <p>
+                Ative o recurso de leitura em voz alta para ouvir o conteúdo do
+                site de forma clara e prática.
+              </p>
             </div>
-            <div class="col-md-6 animate-in" style="animation-delay: 0.2s;">
-                <img src="images/idoso-vendo-tablet.png" alt="Idosos usando tecnologia com alegria"
-                    class="img-fluid rounded img-rounded" />
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <div class="card p-3 animate-in">
+              <img
+                src="images/idososimples.png"
+                alt="Ícone de modo simples"
+                class="img-fluid mb-3"
+              />
+              <p>
+                Ative o Modo Simples para uma interface mais limpa de cores
+                fortes e animações.
+              </p>
             </div>
-        </section>
+          </div>
 
+          <div class="col-md-4 mb-3">
+            <div class="card p-3 animate-in">
+              <img
+                src="images/idosa-dina.png"
+                alt="Ícone de contraste e fonte"
+                class="img-fluid mb-3"
+              />
+              <p>
+                Personalize a aparência do site ajustando o contraste e o
+                tamanho da fonte para uma experiência mais confortável.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section class="row align-items-center">
+        <div class="col-md-7 animate-in" id="porque-utilizar">
+          <h2>
+            Por que utilizar o site Conectando Gerações é bom?
+            <button
+              class="btn btn-sm btn-outline-secondary ms-2"
+              onclick="lerTexto('#porque-utilizar')"
+            >
+              🔊
+            </button>
+          </h2>
+          <ul class="list-unstyled">
+            <li class="mb-3">
+              🌟 Interface simples e intuitiva, ideal para iniciantes. O design
+              do site foi pensado para ser fácil de navegar, com botões grandes
+              e menus claros, garantindo que qualquer pessoa, independentemente
+              de sua experiência com tecnologia, consiga utilizá-lo sem
+              dificuldades.
+            </li>
+            <li class="mb-3">
+              📚 Recursos educativos para aprender no seu ritmo. Oferecemos
+              tutoriais passo a passo e dicas práticas que permitem que os
+              usuários aprendam de forma tranquila e sem pressa, respeitando o
+              tempo de cada um.
+            </li>
+            <li class="mb-3">
+              🤝 Promove a inclusão digital e a conexão entre gerações. O site
+              incentiva a interação entre jovens e idosos, criando oportunidades
+              para que compartilhem experiências e aprendam juntos, fortalecendo
+              os laços familiares e sociais.
+            </li>
+          </ul>
+        </div>
 
-        <section class="mt-5 text-center">
-            <a href="duvidas.html" class="btn btn-primary btn-lg">Ir para Perguntas Frequentes</a>
-        </section>
+            <div class="col-md-4 mb-3">
+            <div class="card p-3 animate-in">
+              <img
+                src="images/idoso-vendo-tablet.png"
+                alt="Ícone de contraste e fonte"
+                class="img-fluid mb-3"/>
+              <p>
+                "Que maravilha! Agora posso aprender a usar meu celular e me
+                conectar com meus netos. Estou tão feliz por ter encontrado este site!
+                Ele é tão fácil de usar e me ajuda a entender tudo."
+              </p>
+            </div>
+          </div>
 
+      </section>
+
+      <section class="mt-5 text-center">
+        <a href="duvidas.html" class="btn btn-primary btn-lg"
+          >Ir para Perguntas Frequentes</a
+        >
+      </section>
     </main>
 
-
     <footer class="container-footer">
-        <div class="container">
-            <div class="row">
+      <div class="container">
+        <div class="row">
+          <!-- Sobre -->
+          <div class="col-md-4 mb-4">
+            <h5 class="fw-bold">Conectando Gerações</h5>
+            <p class="small">
+              Projeto Interdisciplinar de Inclusão Digital.<br />
+              Promovendo acessibilidade, inclusão e conexão através da
+              tecnologia.
+            </p>
+          </div>
 
-                <!-- Sobre -->
-                <div class="col-md-4 mb-4">
-                    <h5 class="fw-bold">Conectando Gerações</h5>
-                    <p class="small">
-                        Projeto Interdisciplinar de Inclusão Digital.<br>
-                        Promovendo acessibilidade, inclusão e conexão através da tecnologia.
-                    </p>
-                </div>
+          <!-- Links úteis -->
+          <div class="col-md-4 mb-4">
+            <h6 class="fw-bold mb-3">Navegação</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#" class="text-decoration-none text-light">Início</a>
+              </li>
+              <li class="mb-2">
+                <a href="#objetivo" class="text-decoration-none text-light"
+                  >Objetivo</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="#funcionalidades"
+                  class="text-decoration-none text-light"
+                  >Funcionalidades</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#conteudo" class="text-decoration-none text-light"
+                  >Conteúdo</a
+                >
+              </li>
+              <li>
+                <a href="duvidas.html" class="text-decoration-none text-light"
+                  >FAQ</a
+                >
+              </li>
+            </ul>
+          </div>
 
-                <!-- Links úteis -->
-                <div class="col-md-4 mb-4">
-                    <h6 class="fw-bold mb-3">Navegação</h6>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-light">Início</a></li>
-                        <li class="mb-2"><a href="#objetivo" class="text-decoration-none text-light">Objetivo</a></li>
-                        <li class="mb-2"><a href="#funcionalidades"
-                                class="text-decoration-none text-light">Funcionalidades</a></li>
-                        <li class="mb-2"><a href="#conteudo" class="text-decoration-none text-light">Conteúdo</a></li>
-                        <li><a href="duvidas.html" class="text-decoration-none text-light">FAQ</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contato ou redes -->
-                <div class="col-md-4 mb-4">
-                    <h6 class="fw-bold mb-3">Contato</h6>
-                    <p class="small mb-1">Email: contato@conectandogeracoes.com</p>
-                    <p class="small mb-3">Telefone: (99) 99999-9999</p>
-                    <div>
-                        <a href="#" class="text-light me-3">
-                            <i class="bi bi-facebook"></i> Facebook
-                        </a>
-                        <a href="#" class="text-light me-3">
-                            <i class="bi bi-instagram"></i> Instagram
-                        </a>
-                        <a href="#" class="text-light">
-                            <i class="bi bi-whatsapp"></i> WhatsApp
-                        </a>
-                    </div>
-                </div>
-
+          <!-- Contato ou redes -->
+          <div class="col-md-4 mb-4">
+            <h6 class="fw-bold mb-3">Contato</h6>
+            <p class="small mb-1">Email: contato@conectandogeracoes.com</p>
+            <p class="small mb-3">Telefone: (99) 99999-9999</p>
+            <div>
+              <a href="#" class="text-light me-3">
+                <i class="bi bi-facebook"></i> Facebook
+              </a>
+              <a href="#" class="text-light me-3">
+                <i class="bi bi-instagram"></i> Instagram
+              </a>
+              <a href="#" class="text-light">
+                <i class="bi bi-whatsapp"></i> WhatsApp
+              </a>
             </div>
-
-            <hr class="border-secondary">
-
-            <div class="text-center small">
-                © 2025 Conectando Gerações. Todos os direitos reservados.
-            </div>
+          </div>
         </div>
+
+        <hr class="border-secondary" />
+
+        <div class="text-center small">
+          © 2025 Conectando Gerações. Todos os direitos reservados.
+        </div>
+      </div>
     </footer>
 
-    <script src="css/ajuda.css"></script>
     <script src="js/acessibilidade.js"></script>
     <script src="js/toolbaracess.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/config.js"></script>
-
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

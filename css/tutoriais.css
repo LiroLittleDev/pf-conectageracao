@@ -1,152 +1,173 @@
-    body.tutorial-body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #fffaf8;
-    }
+/* 🌟 Estilo padrão - Modo Normal */
+body.tutorial-body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fffaf8;
+}
 
-    .tutorial-header {
-      background: linear-gradient(to right, #f7d8d0, #f9c6c5);
-      padding: 2.5rem 1rem;
-      border-bottom-left-radius: 30px;
-      border-bottom-right-radius: 30px;
-      text-align: center;
-    }
+/* 🔥 Header da página */
+.tutorial-header {
+  background: url("../images/hero-background.png") no-repeat center center fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  padding: 6rem 1.5rem 5rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+  box-shadow: 0 12px 40px rgba(240, 138, 129, 0.16);
+  text-align: center;
+}
 
-    .tutorial-header h1 {
-      font-weight: 700;
-      color: #f5581a;
-    }
+.tutorial-header h1 {
+  font-weight: 700;
+  font-size: 3em;
+  color: #f5581a;
+}
 
-            .tutorial-header p {
-      font-weight: 700;
-      font-size: 1.2rem;
-    }
+.tutorial-header p {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
 
-    .tutorial-card {
-      background-color: #fff;
-      border: none;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease;
-    }
+/* 🔸 Card de tutorial */
+.tutorial-card {
+  background-color: #fff;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 320px; /* ✅ Mantém altura mínima dos cards */
+}
 
-    .tutorial-card img {
+.tutorial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* 🔸 Imagem do card */
+.tutorial-card img {
   width: 100%;
-  height: 180px; /* Defina a altura que desejar */
-  object-fit: cover; /* Mantém o preenchimento sem deformar */
+  height: 180px;
+  object-fit: cover;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
 }
 
-    .tutorial-card:hover {
-      transform: translateY(-6px);
-    }
+/* 🔸 Título e texto dos cards */
+.tutorial-card-title {
+  font-weight: 600;
+  color: #333;
+}
 
-    .tutorial-card img {
-      border-top-left-radius: 16px;
-      border-top-right-radius: 16px;
-    }
+.tutorial-card-text {
+  color: #666;
+}
 
-    .tutorial-card-title {
-      font-weight: 600;
-      color: #333;
-    }
+/* 🔸 Botão dos cards */
+.tutorial-btn {
+  background-color: #ff8859;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: transform 0.2s, background-color 0.2s;
+}
 
-    .tutorial-card-text {
-      color: #666;
-    }
+.tutorial-btn:hover {
+  background-color: #d94c1a;
+  transform: scale(1.05);
+}
 
-    .tutorial-btn {
-      background-color: #f5581a;
-      border: none;
-      border-radius: 10px;
-      font-weight: 600;
-    }
+.tutorial-btn:focus {
+  outline: 3px solid #ffe066;
+  outline-offset: 2px;
+}
 
-    .tutorial-btn:hover {
-      background-color: #d94c1a;
-    }
-
- /* 🔳 High Contrast - Tutorial */
+/* 🔳 High Contrast - Tutorial */
 body.tutorial-body.high-contrast {
-    background-color: #000 !important;
-    color: #fff !important;
+  background-color: #000 !important;
+  color: #fff !important;
 }
 
 .high-contrast .tutorial-header {
-    background: #111 !important;
-    color: #fff !important;
-    box-shadow: none !important;
+  background: #111 !important;
+  color: #fff !important;
+  box-shadow: none !important;
 }
 
 .high-contrast .tutorial-header h1 {
-    color: #ffe066 !important;
+  color: #ffe066 !important;
 }
+
 .high-contrast .tutorial-header p {
-    color: #ffffff !important;
+  color: #ffffff !important;
 }
+
 .high-contrast .tutorial-card {
-    background-color: #121212 !important;
-    color: #fff !important;
-    border: 1px solid #333 !important;
+  background-color: #121212 !important;
+  color: #fff !important;
+  border: 1px solid #333 !important;
 }
 
 .high-contrast .tutorial-card-title {
-    color: #fff !important;
+  color: #fff !important;
 }
 
 .high-contrast .tutorial-card-text {
-    color: #ccc !important;
+  color: #ccc !important;
 }
 
 .high-contrast .tutorial-btn {
-    background-color: #ffe066 !important;
-    color: #000 !important;
-    border: none !important;
+  background-color: #ffe066 !important;
+  color: #000 !important;
+  border: none !important;
 }
 
 .high-contrast .tutorial-btn:hover {
-    background-color: #fff !important;
-    color: #111 !important;
+  background-color: #fff !important;
+  color: #111 !important;
 }
 
 /* 🌤️ Modo Simples - Tutorial */
 body.tutorial-body.modo-simples {
-    background-color: #f2f2f2 !important;
-    color: #222 !important;
-    font-family: Arial, Helvetica, sans-serif !important;
+  background-color: #f2f2f2 !important;
+  color: #222 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
 }
 
 .modo-simples .tutorial-header {
-    background: #e0e0e0 !important;
-    color: #000 !important;
-    box-shadow: none !important;
+  background: #e0e0e0 !important;
+  color: #000 !important;
+  box-shadow: none !important;
 }
 
 .modo-simples .tutorial-header h1 {
-    color: #333 !important;
+  color: #333 !important;
 }
 
 .modo-simples .tutorial-card {
-    background-color: #ffffff !important;
-    color: #000 !important;
-    border: 1px solid #ccc !important;
-    box-shadow: none !important;
+  background-color: #ffffff !important;
+  color: #000 !important;
+  border: 1px solid #ccc !important;
+  box-shadow: none !important;
+  border-radius: 0 !important; /* 🔥 Remove bordas arredondadas no modo simples */
 }
 
 .modo-simples .tutorial-card-title {
-    color: #222 !important;
+  color: #222 !important;
 }
 
 .modo-simples .tutorial-card-text {
-    color: #555 !important;
+  color: #555 !important;
 }
 
 .modo-simples .tutorial-btn {
-    background-color: #ddd !important;
-    color: #000 !important;
-    border: 1px solid #999 !important;
+  background-color: #ddd !important;
+  color: #000 !important;
+  border: 1px solid #999 !important;
 }
 
 .modo-simples .tutorial-btn:hover {
-    background-color: #c4c4c4 !important;
+  background-color: #c4c4c4 !important;
 }

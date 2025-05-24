@@ -14,55 +14,81 @@
     <link rel="stylesheet" href="css/duvidas.css" />
   </head>
 
-
   <body class="faq-body">
-       <nav class="navbar bg-navbar navbar-expand-lg navbar-light bg-navbar shadow-sm py-3">
-        <div class="container">
-            <!-- Logo -->
-            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-                <img src="images/icon-nav.png" alt="Ícone do projeto" class="logo-icon">
-                <img src="images/logo-conectandogeracoescut.png" alt="Texto Conectando Gerações" class="logo-text">
-            </a>
 
-            <!-- Botão de menu mobile -->
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <nav class="navbar bg-navbar navbar-expand-lg navbar-light bg-navbar shadow-sm py-3">
+      <div class="container">
+        <!-- Logo -->
+        <a class="d-flex align-items-center gap-2" href="index.html">
+          <img
+            src="images/icon-nav.png"
+            alt="Ícone do projeto"
+            class="logo-icon"
+          />
+          <img
+            src="images/logo-conectandogeracoescut.png"
+            alt="Texto Conectando Gerações"
+            class="logo-text"
+          />
+        </a>
 
-            <!-- Links do menu -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav gap-lg-4 align-items-lg-center">
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold active" aria-current="page" href="#">Início</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold" href="#objetivo-projeto">Objetivo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold" href="#funcionalidades">Funcionalidades</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold" href="tutoriais.html">Tutoriais</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold" href="duvidas.html">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-primary fw-semibold px-4 ms-lg-2" href="cadastro.html">Cadastro</a>
-                    </li>
-                </ul>
-            </div>
+        <!-- Botão de menu mobile -->
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Alternar navegação"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links do menu -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav gap-lg-4 align-items-lg-center">
+            <li class="nav-item">
+              <a
+                class="nav-link fw-semibold"
+                aria-current="page"
+                href="index.html"
+                >Início</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="tutoriais.html"
+                >Tutoriais</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="duvidas.html">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-primary fw-semibold px-4 ms-lg-2" href="login.html"> Login </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="btn btn-primary fw-semibold px-4 ms-lg-2"
+                href="cadastro.html"
+                >Cadastro</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <header class="faq-header text-center">
       <div class="container">
         <h1 class="fw-bold">Perguntas Frequentes</h1>
-        <p class="lead">
-          Tire suas dúvidas sobre como usar a plataforma<br/>de forma simples e
+        <h3 class="lead">
+          Tire suas dúvidas sobre como usar a plataforma<br />de forma simples e
           prática
-        </p>
+        </h3>
       </div>
     </header>
 
@@ -72,13 +98,13 @@
         <h3 class="fw-semibold mb-3">Como você está acessando?</h3>
         <p>Escolha o dispositivo para ver instruções específicas:</p>
         <button
-          class="btn btn-outline-primary px-4 me-2"
+          class="btn btn-primary px-4 me-2"
           onclick="showFAQ('mobile')"
         >
           📱 Celular
         </button>
         <button
-          class="btn btn-outline-primary px-4"
+          class="btn btn-primary px-4"
           onclick="showFAQ('computer')"
         >
           💻 Computador

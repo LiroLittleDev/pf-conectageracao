@@ -2,16 +2,15 @@ window.onload = () => {
     const preferencias = {
         modoSimples: localStorage.getItem('modoSimples') === 'true',
         contraste: localStorage.getItem('highContrast') === 'true',
-        fontSize: localStorage.getItem('fontSize'),
-        toolbar: localStorage.getItem('toolbar')
+        fontSize: parseInt(localStorage.getItem('fontSize')) || 16,
     };
 
-    const paginas = ['hero-section', 'login-body', 'cadastro-body', 'tutorial-body', 'faq-body'];
+    const paginas = ['login-body', 'cadastro-body', 'tutorial-body', 'faq-body'];
+
+    let fontSize = preferencias.fontSize;
 
     // ✔️ Aplica tamanho da fonte
-    if (preferencias.fontSize) {
-        document.body.style.fontSize = `${parseInt(preferencias.fontSize)}px`;
-    }
+    applyFontSize();
 
     // ✔️ Função genérica para aplicar classes
     function aplicarClasse(classeBody, classeExtra = '') {
@@ -39,4 +38,3 @@ window.onload = () => {
 
     atualizarEstadoBotoes();
 };
-
