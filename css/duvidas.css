@@ -6,18 +6,21 @@ body.faq-body {
 }
 
 .faq-header {
-  background: url("../images/hero-background.png") no-repeat center center fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  padding: 6rem 1.5rem 5rem 1.5rem;
-  position: relative;
-  overflow: hidden;
-  z-index: 10;
-  box-shadow: 0 12px 40px rgba(240, 138, 129, 0.16);
-  text-align: center;
+    margin: 0;
+    padding: 0;
+    background: url("../images/hero-background.png") no-repeat center center fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    padding: 6rem 1.5rem 5rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+    box-shadow: 0 12px 40px rgba(240, 138, 129, 0.16);
+    text-align: center;
+
 }
 
 .faq-header h1 {
@@ -38,68 +41,68 @@ body.faq-body {
 }
 
 /* === Acessibilidade - High Contrast === */
-body.high-contrast.faq-body {
+.high-contrast.faq-body {
     background-color: #000 !important;
     color: #fff !important;
 }
 
-body.high-contrast .faq-header {
+.high-contrast .faq-header {
     background-color: #222 !important;
     background-image: none !important;
 }
 
-body.high-contrast .faq-header h1 {
+.high-contrast .faq-header h1 {
     color: #ffe066 !important;
 }
 
-body.high-contrast .faq-header h3 {
+.high-contrast .faq-header h3 {
     color: #f7f7f7 !important;
 }
 
-body.high-contrast .faq-box {
+.high-contrast .faq-box {
     background-color: #121212 !important;
     color: #fff !important;
     border: 1px solid #333 !important;
 }
 
-body.high-contrast .accordion-button {
+.high-contrast .accordion-button {
     background-color: #121212 !important;
     color: #fff !important;
 }
 
-body.high-contrast .accordion-button:not(.collapsed) {
+.high-contrast .accordion-button:not(.collapsed) {
     background-color: #ffe066 !important;
     color: #000 !important;
 }
 
-body.high-contrast a {
+.high-contrast a {
     color: #ffe066 !important;
     text-decoration: underline;
 }
 
 /* === Acessibilidade - Modo Simples === */
-body.modo-simples.faq-body {
+.modo-simples.faq-body {
     background-color: #f2f2f2 !important;
     color: #222 !important;
 }
 
-body.modo-simples .faq-header {
+.modo-simples .faq-header {
     background-color: #e0e0e0 !important;
     background-image: none !important;
 }
 
-body.modo-simples .faq-box {
+.modo-simples .faq-box {
     background-color: #fff !important;
     border: 1px solid #ccc !important;
     box-shadow: none !important;
 }
 
-body.modo-simples .accordion-button {
+.modo-simples .accordion-button {
     background-color: #fff !important;
     color: #222 !important;
 }
 
-body.modo-simples .accordion-button:not(.collapsed) {
+.modo-simples .accordion-button:not(.collapsed) {
     background-color: #d6d6d6 !important;
     color: #000 !important;
 }

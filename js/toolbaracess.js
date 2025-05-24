@@ -115,6 +115,7 @@ function atualizarEstadoBotoes() {
   }
 }
 
+
 function toggleToolbar() {
     const toolbar = document.getElementById('toolbar');
     if (!toolbar) return;
@@ -129,8 +130,6 @@ function toggleToolbar() {
         localStorage.setItem('toolbar', 'aberto');
     }
 }
-
-
 
 
 

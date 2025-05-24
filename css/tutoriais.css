@@ -18,6 +18,7 @@ body.tutorial-body {
   z-index: 10;
   box-shadow: 0 12px 40px rgba(240, 138, 129, 0.16);
   text-align: center;
+  border: 1px solid #f51a1a;
 }
 
 .tutorial-header h1 {

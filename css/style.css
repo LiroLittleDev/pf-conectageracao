@@ -6,6 +6,11 @@
   --accent-color: #fff; /* Peach Accent */
 }
 
+#toolbar {
+  display: none;
+}
+
+
 body {
   background: url("../images/background.png") no-repeat center center fixed;
   background-size: cover;
@@ -257,12 +262,22 @@ h3{
 }
 
 .btn {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s, background-color 0.2s;
+  padding: 12px 16px;
+}
+
+@media screen and (max-width: 576px) {
+  #btn-contraste {
+    padding: 12px 16px;
+    font-size: 1rem;
+    border-radius: 0px 0px 0px 35px;
+  }
+  
 }
 
 .btn:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
   background-color: #fd771d;
 }
 

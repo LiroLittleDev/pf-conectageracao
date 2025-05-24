@@ -5,7 +5,6 @@ window.onload = () => {
         fontSize: parseInt(localStorage.getItem('fontSize')) || 16,
     };
 
-    const paginas = ['login-body', 'cadastro-body', 'tutorial-body', 'faq-body'];
 
     let fontSize = preferencias.fontSize;
 
@@ -19,6 +18,8 @@ window.onload = () => {
             document.querySelector(`.${pagina}`)?.classList.add(`${classeBody}${classeExtra}`);
         });
     }
+
+    
 
     // ✔️ Aplica Modo Simples
     if (preferencias.modoSimples) {
