@@ -4,6 +4,16 @@ body.tutorial-body {
   background-color: #fffaf8;
 }
 
+#video-container {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+.video-player iframe {
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+
 /* 🔥 Header da página */
 .tutorial-header {
   background: url("../images/hero-background.png") no-repeat center center fixed;
@@ -18,7 +28,7 @@ body.tutorial-body {
   z-index: 10;
   box-shadow: 0 12px 40px rgba(240, 138, 129, 0.16);
   text-align: center;
-  border: 1px solid #f51a1a;
+    box-shadow: 0 12px 40px rgba(240, 138, 129, 0.16);
 }
 
 .tutorial-header h1 {
@@ -94,7 +104,7 @@ body.tutorial-body.high-contrast {
 .high-contrast .tutorial-header {
   background: #111 !important;
   color: #fff !important;
-  box-shadow: none !important;
+  box-shadow: 0 12px 40px rgba(240, 138, 129, 0.16);
 }
 
 .high-contrast .tutorial-header h1 {
