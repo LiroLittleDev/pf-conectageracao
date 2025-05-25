@@ -14,6 +14,7 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/tutoriais.css" />
+    <link rel="stylesheet" href="css/chatgpt.css">
   </head>
 
   <body class="tutorial-body">
@@ -93,131 +94,93 @@
     <div id="video-container"></div>
 
     <main class="container my-5">
-      <div class="row g-4">
-        <!-- Tutorial 1 -->
-        <div class="col-md-4">
-          <div class="card tutorial-card">
-            <img
-              src="images/tutorial/whatsapp-tuto.png"
-              class="card-img-top"
-              alt="Tutorial WhatsApp"
-            />
-            <div class="card-body">
-              <h5 class="card-title tutorial-card-title">
-                Como usar o WhatsApp
-              </h5>
-              <p class="card-text tutorial-card-text">
-                Aprenda a enviar mensagens, fazer chamadas e usar figurinhas no
-                WhatsApp.
-              </p>
-              <button class="btn btn-primary" onclick="carregarVideo('DG5sqJJubR0')">Ver Tutorial</button>
-
-            </div>
-          </div>
-        </div>
-
-        <!-- Tutorial 2 -->
-        <div class="col-md-4">
-          <div class="card tutorial-card">
-            <img
-              src="images/tutorial/youtube-tuto.jpg"
-              class="card-img-top"
-              alt="Tutorial YouTube"
-            />
-            <div class="card-body">
-              <h5 class="card-title tutorial-card-title">
-                Como assistir vídeos no YouTube
-              </h5>
-              <p class="card-text tutorial-card-text">
-                Saiba como pesquisar vídeos, se inscrever em canais e ativar
-                legendas.
-              </p>
-                            <button class="btn btn-primary" onclick="carregarVideo('FyOF8AZip1o')">Ver Tutorial</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tutorial 3 -->
-        <div class="col-md-4">
-          <div class="card tutorial-card">
-            <img
-              src="images/tutorial/email-tuto.png"
-              class="card-img-top"
-              alt="Tutorial Email"
-            />
-            <div class="card-body">
-              <h5 class="card-title tutorial-card-title">
-                Como enviar e-mails
-              </h5>
-              <p class="card-text tutorial-card-text">
-                Aprenda a criar, enviar e responder e-mails de forma simples.
-              </p>
-              <a href="#" class="btn tutorial-btn">Ver Tutorial</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tutorial 4 -->
-        <div class="col-md-4">
-          <div class="card tutorial-card">
-            <img
-              src="images/tutorial/google-tuto.jpg"
-              class="card-img-top"
-              alt="Tutorial Google"
-            />
-            <div class="card-body">
-              <h5 class="card-title tutorial-card-title">
-                Como pesquisar no Google
-              </h5>
-              <p class="card-text tutorial-card-text">
-                Entenda como encontrar qualquer informação na internet.
-              </p>
-              <a href="#" class="btn tutorial-btn">Ver Tutorial</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tutorial 5 -->
-        <div class="col-md-4">
-          <div class="card tutorial-card">
-            <img
-              src="images/tutorial/foto-tuto.jpg"
-              class="card-img-top"
-              alt="Tutorial Fotos"
-            />
-            <div class="card-body">
-              <h5 class="card-title tutorial-card-title">
-                Como tirar e enviar fotos
-              </h5>
-              <p class="card-text tutorial-card-text">
-                Descubra como usar a câmera, tirar fotos e compartilhar com
-                amigos.
-              </p>
-              <a href="#" class="btn tutorial-btn">Ver Tutorial</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tutorial 6 -->
-        <div class="col-md-4">
-          <div class="card tutorial-card">
-            <img
-              src="images/tutorial/senha-tuto.png"
-              class="card-img-top"
-              alt="Tutorial Senhas"
-            />
-            <div class="card-body">
-              <h5 class="card-title tutorial-card-title">
-                Como criar senhas seguras
-              </h5>
-              <p class="card-text tutorial-card-text">
-                Dicas práticas para criar senhas fortes e proteger suas contas.
-              </p>
-              <a href="#" class="btn tutorial-btn">Ver Tutorial</a>
-            </div>
-          </div>
-        </div>
+<div class="row g-4">
+  <!-- Tutorial 1 -->
+  <div class="col-md-4">
+    <div class="card tutorial-card">
+      <img src="images/tutorial/whatsapp-tuto.png" class="card-img-top" alt="Tutorial WhatsApp" />
+      <div class="card-body">
+        <h5 class="card-title tutorial-card-title">Como usar o WhatsApp</h5>
+        <p class="card-text tutorial-card-text">
+          Aprenda a enviar mensagens, fazer chamadas, enviar fotos e usar figurinhas no WhatsApp de forma simples.
+        </p>
+        <button class="btn tutorial-btn" onclick="carregarVideo('DG5sqJJubR0')">Ver Tutorial</button>
       </div>
+    </div>
+  </div>
+
+  <!-- Tutorial 2 -->
+  <div class="col-md-4">
+    <div class="card tutorial-card">
+      <img src="images/tutorial/youtube-tuto.jpg" class="card-img-top" alt="Tutorial YouTube" />
+      <div class="card-body">
+        <h5 class="card-title tutorial-card-title">Como assistir vídeos no YouTube</h5>
+        <p class="card-text tutorial-card-text">
+          Descubra como procurar vídeos, assistir, se inscrever em canais e ativar legendas no YouTube.
+        </p>
+        <button class="btn tutorial-btn" onclick="carregarVideo('FyOF8AZip1o')">Ver Tutorial</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tutorial 3 -->
+  <div class="col-md-4">
+    <div class="card tutorial-card">
+      <img src="images/tutorial/chatgpt-tuto.jpg" class="card-img-top" alt="Tutorial ChatGPT" />
+      <div class="card-body">
+        <h5 class="card-title tutorial-card-title">Como baixar e usar o ChatGPT</h5>
+        <p class="card-text tutorial-card-text">
+          Veja como baixar o aplicativo do ChatGPT, criar sua conta e começar a conversar com a inteligência artificial.
+        </p>
+        <button class="btn tutorial-btn" onclick="carregarVideo('mNUYSVJM0JM')">Ver Tutorial</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tutorial 4 -->
+<div class="col-md-4">
+  <div class="card tutorial-card">
+    <img src="images/tutorial/googlemaps-tuto.jpg" class="card-img-top" alt="Tutorial Google Maps" />
+    <div class="card-body">
+      <h5 class="card-title tutorial-card-title">Como usar o Google Maps</h5>
+      <p class="card-text tutorial-card-text">
+        Descubra como usar o Google Maps para ver locais, traçar rotas, encontrar restaurantes e chegar ao seu destino com facilidade.
+      </p>
+      <button class="btn tutorial-btn" onclick="carregarVideo('8BnAjht1amA')">Ver Tutorial</button>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Tutorial 5 -->
+<div class="col-md-4">
+  <div class="card tutorial-card">
+    <img src="images/tutorial/qrcode-tuto.jpg" class="card-img-top" alt="Tutorial QR Code" />
+    <div class="card-body">
+      <h5 class="card-title tutorial-card-title">Como escanear QR Code</h5>
+      <p class="card-text tutorial-card-text">
+        Aprenda de forma simples como usar a câmera do celular para escanear QR Codes em pagamentos, links, cardápios ou Wi-Fi.
+      </p>
+      <button class="btn tutorial-btn" onclick="carregarVideo('-KHRXNMc60E')">Ver Tutorial</button>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Tutorial 6 -->
+  <div class="col-md-4">
+    <div class="card tutorial-card">
+      <img src="images/tutorial/senha-tuto.png" class="card-img-top" alt="Tutorial Senhas" />
+      <div class="card-body">
+        <h5 class="card-title tutorial-card-title">Como criar senhas seguras</h5>
+        <p class="card-text tutorial-card-text">
+          Aprenda dicas simples e práticas para criar senhas fortes, seguras e proteger suas contas na internet.
+        </p>
+        <button class="btn tutorial-btn" onclick="carregarVideo('DhXaVsnhhNM')">Ver Tutorial</button>
+      </div>
+    </div>
+  </div>
+</div>
     </main>
 
     <div class="text-center mb-5">
