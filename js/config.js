@@ -1,17 +1,18 @@
 window.onload = () => {
+    // 🔥 Carrega preferências salvas do localStorage
     const preferencias = {
         modoSimples: localStorage.getItem('modoSimples') === 'true',
         contraste: localStorage.getItem('highContrast') === 'true',
         fontSize: parseInt(localStorage.getItem('fontSize')) || 16,
+        toolbarAberta: localStorage.getItem('toolbarAberta') === 'true'
     };
-
 
     let fontSize = preferencias.fontSize;
 
-    // ✔️ Aplica tamanho da fonte
+    // 🔧 Aplica tamanho da fonte
     applyFontSize();
 
-    // ✔️ Função genérica para aplicar classes
+    // 🔧 Função para aplicar classes no body e nas páginas específicas
     function aplicarClasse(classeBody, classeExtra = '') {
         document.body.classList.add(classeBody);
         paginas.forEach(pagina => {
@@ -19,21 +20,22 @@ window.onload = () => {
         });
     }
 
-    // ✔️ Aplica Modo Simples
+    // 🔲 Ativa Modo Simples se estava salvo
     if (preferencias.modoSimples) {
         aplicarClasse('modo-simples', '-hero');
     }
 
-    // ✔️ Aplica Modo Contraste
+    // 🔳 Ativa Modo Contraste se estava salvo
     if (preferencias.contraste) {
         aplicarClasse('high-contrast', '-hero');
     }
 
-    // ✔️ Estado da Toolbar
+    // 🧰 Define estado da toolbar (aberta ou fechada)
     const toolbar = document.getElementById('toolbar');
     if (toolbar) {
-        toolbar.style.display = preferencias.toolbar === 'aberto' ? 'flex' : 'none';
+        toolbar.style.display = preferencias.toolbarAberta ? 'flex' : 'none';
     }
 
+    // 🔃 Atualiza estado dos botões da toolbar
     atualizarEstadoBotoes();
 };
