@@ -91,341 +91,139 @@
         </h3>
     </header>
 
-    <main class="container my-5">
-      
-      <!-- Seleção de Dispositivo -->
-      <section class="faq-device-select text-center mb-5">
-        <h3 class="fw-semibold mb-3 ">Como você está acessando?</h3>
-        <h3>Escolha o dispositivo para ver instruções específicas:</h3>
-        <button
-          class="btn btn-primary px-4 me-2 mt-5"
-          onclick="showFAQ('mobile')"
-        >
-          📱 Celular
-        </button>
-        <button
-          class="btn btn-primary px-4 mt-5"
-          onclick="showFAQ('computer')"
-        >
-          💻 Computador
-        </button>
-      </section>
+<main class="container my-5">
 
-      <!-- FAQ Celular -->
-      <section class="faq-box d-none" id="mobile-faq">
-        <h3 class="fw-bold mb-4">Dúvidas Frequentes - Celular</h3>
-        <div class="accordion" id="faqMobileAccordion">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#m7"
-              >
-                Como usar as funções de acessibilidade no site?
-              </button>
-            </h2>
-            <div id="m7" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                No topo da página, você verá um ícone de
-                <strong>engrenagem ⚙️</strong>. Ao tocar nele, abrirá um menu
-                com várias opções de acessibilidade. Veja como cada uma
-                funciona:
-                <ul>
-                  <li>
-                    <strong>+ Texto / - Texto:</strong> Aumenta ou diminui o
-                    tamanho das letras, facilitando a leitura.
-                  </li>
-                  <li>
-                    <strong>Modo Simples:</strong> Deixa o site com uma
-                    aparência mais limpa, sem muitos efeitos e com menos
-                    informações visuais.
-                  </li>
-                  <li>
-                    <strong>Modo Contraste:</strong> Ativa um fundo preto com
-                    texto branco, que ajuda muito quem tem sensibilidade a luz
-                    ou baixa visão.
-                  </li>
-                </ul>
-                Basta tocar na opção que você deseja e ela será aplicada
-                imediatamente em todas as páginas do site.
-              </div>
-            </div>
-          </div>
+<div class="col-lg-4 mb-4 animate-in mx-auto">
+  <div class="card p-4 h-100">
+    <img
+      src="images/idoso-joinha.png"
+      alt="Ícone de idoso com tablet"
+      class="img-fluid mb-3 rounded"
+    />
+<em><p class="mb-0">
+  "No começo fiquei meio perdido... não sabia por onde começar, o que apertar ou como usar. Aí descobri a parte de 'Dúvidas Frequentes' aqui no site, que me explicou tudo direitinho. Agora ficou muito mais fácil! Aos poucos estou aprendendo e me sentindo mais confiante."
+</p></em>
 
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#m8"
-              >
-                Como desativar o Modo Simples ou o Modo Contraste?
-              </button>
-            </h2>
-            <div id="m8" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                É bem simples! Para
-                <strong>desativar o Modo Simples ou o Modo Contraste</strong>,
-                você só precisa tocar novamente na opção que ativou dentro do
-                menu da <strong>engrenagem ⚙️</strong> no topo do site.
-                <br /><br />
-                Quando o modo está ativado, ele fica marcado. Ao tocar de novo,
-                ele é imediatamente desativado e o site volta para o modo
-                padrão.
-                <br /><br />
-                👉 Essa configuração permanece salva, mesmo se você sair e
-                voltar ao site.
-              </div>
-            </div>
-          </div>
+  </div>
+</div>
 
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#m2"
-              >
-                Como aumentar o tamanho das letras no site?
-              </button>
-            </h2>
-            <div id="m2" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                Toque no ícone de engrenagem (⚙️) no topo da página e selecione
-                “+ Texto” para aumentar e “- Texto” para diminuir. Você pode
-                ajustar conforme sua preferência de leitura.
-              </div>
-            </div>
-          </div>
 
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#m3"
-              >
-                Tem como ouvir o texto ao invés de ler?
-              </button>
-            </h2>
-            <div id="m3" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                Sim! Ao lado dos títulos principais e textos importantes, há um
-                botão de som (🔊). Toque nele e o texto será lido em voz alta.
-              </div>
-            </div>
-          </div>
+  <div class="faq-cards row">
+    <!-- Pergunta 1 -->
+              <div class="col-md-6 mb-4">
+      <div class="faq-card">
+        <h4>O que é o Menu de Acessibilidade?</h4>
+        <p>É o botão azul no canto superior direito. Ele abre um menu com todas as opções de acessibilidade, como Modo Simples, Contraste, Ajuste de Texto e Ler-Clique.</p>
+      </div>
+    </div>
 
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#m4"
-              >
-                Como ativar o Modo Simples ou Alto Contraste?
-              </button>
-            </h2>
-            <div id="m4" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                Toque na engrenagem (⚙️) no topo da página. Você pode ativar o
-                <strong>Modo Simples</strong> para deixar a tela mais limpa e
-                sem distrações ou <strong>Modo Contraste</strong> para fundo
-                preto com letras brancas, ajudando na leitura.
-              </div>
-            </div>
-          </div>
 
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#m5"
-              >
-                Como faço para voltar para a página inicial?
-              </button>
-            </h2>
-            <div id="m5" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                Toque no logo do site no topo da página ou no botão “Início” que
-                está no menu. Assim você volta rapidamente para a página
-                principal.
-              </div>
-            </div>
-          </div>
+    <!-- Pergunta 2 -->
+         <div class="col-md-6 mb-4">
+      <div class="faq-card">
+        <h4>O que é o Modo Simples e como funciona?</h4>
+        <p>O Modo Simples remove elementos decorativos e deixa o site mais limpo e fácil de entender, com menos distrações visuais.</p>
+      </div>
+    </div>
+ 
 
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#m6"
-              >
-                Como fazer login na minha conta?
-              </button>
-            </h2>
-            <div id="m6" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                Na página inicial, toque em “Área de Login”. Depois digite seu
-                e-mail e sua senha. Se não tiver cadastro, toque em “Criar
-                Conta” para se registrar.
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <!-- Pergunta 3 -->
+    <div class="col-md-6 mb-4">
+      <div class="faq-card">
+        <h4>Como ajustar o tamanho das letras?</h4>
+        <p>Na barra de acessibilidade (Botão Azul), clique em <strong>“+ Texto”</strong> para aumentar ou <strong>“- Texto”</strong> para diminuir.</p>
+      </div>
+    </div>
 
-      <!-- FAQ Computador -->
-      <section class="faq-box d-none" id="computer-faq">
-        <h3 class="fw-bold mb-4">Dúvidas Frequentes - Computador</h3>
-        <div class="accordion" id="faqComputerAccordion">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                data-bs-toggle="collapse"
-                data-bs-target="#c3"
-              >
-                Como utilizar os recursos de acessibilidade?
-              </button>
-            </h2>
-            <div id="c3" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                Na parte superior direita do site, clique no ícone de
-                <strong>engrenagem (⚙️)</strong> para abrir a
-                <strong>barra de acessibilidade</strong>. Por ela, você pode:
-                <ul class="mt-2">
-                  <li>
-                    <strong>Ativar Modo Simples:</strong> Deixa o site mais
-                    limpo e sem distrações.
-                  </li>
-                  <li>
-                    <strong>Aumentar ou diminuir o texto:</strong> Ajuste o
-                    tamanho das letras.
-                  </li>
-                  <li>
-                    <strong>Ativar Modo Contraste:</strong> Deixa o site com
-                    fundo preto e texto branco para melhor leitura.
-                  </li>
-                </ul>
-                Basta clicar novamente no botão para desativar qualquer função
-                quando quiser.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                data-bs-toggle="collapse"
-                data-bs-target="#c4"
-              >
-                Como alterar o tamanho da letra no site?
-              </button>
-            </h2>
-            <div id="c4" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                Clique no ícone de <strong>engrenagem (⚙️)</strong> no canto
-                superior direito. No menu que abrir, selecione
-                <strong>"+ Texto"</strong> para aumentar ou
-                <strong>"- Texto"</strong> para diminuir o tamanho das letras da
-                página conforme sua preferência.
-              </div>
-            </div>
-          </div>
+    <!-- Pergunta 4 -->
+        <div class="col-md-6 mb-4">
+      <div class="faq-card">
+        <h4>O que faz o Modo Contraste?</h4>
+        <p>Ativa fundo preto e texto branco, melhorando a leitura para pessoas com baixa visão, sensibilidade à luz ou outras dificuldades visuais.</p>
+      </div>
+    </div>
+ 
 
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                data-bs-toggle="collapse"
-                data-bs-target="#c5"
-              >
-                Como ativar ou desativar o Modo Contraste?
-              </button>
-            </h2>
-            <div id="c5" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                Na barra de acessibilidade (ícone de engrenagem ⚙️), clique em
-                <strong>“Contraste”</strong> para ativar. Isso irá mudar o fundo
-                do site para preto e o texto para branco, facilitando a leitura.
-                Clique novamente no botão para desativar quando quiser.
-              </div>
-            </div>
-          </div>
+    <!-- Pergunta 5 -->
+        <div class="col-md-6 mb-4">
+      <div class="faq-card">
+        <h4>Como funciona o Ler-Clique?</h4>
+        <p>Ao ativar, seu cursor vira um leitor. Clique em qualquer texto e ele será lido em voz alta. Enquanto está ativo, os links e botões ficam desativados para evitar sair da página. Para desativa-lo basta clicar no botão novamente.</p>
+      </div>
+    </div>
 
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                data-bs-toggle="collapse"
-                data-bs-target="#c6"
-              >
-                Como ouvir o conteúdo do site?
-              </button>
-            </h2>
-            <div id="c6" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                Sempre que você visualizar um texto com o botão de
-                <strong>som 🔊</strong> ao lado, clique nele. O site irá fazer a
-                leitura em voz alta daquele conteúdo, tornando mais acessível
-                para quem tem dificuldade com leitura.
-              </div>
-            </div>
-          </div>
+    <!-- Pergunta 6 -->
+    <div class="col-md-6 mb-4">
+      <div class="faq-card">
+        <h4>Como resetar as configurações?</h4>
+        <p>Clique no botão direito inferior escrito "Ajuda", irá aparecer algumas funções e selecione "Resetar Configurações" para voltar aos padrões originais do site.</p>
+      </div>
+    </div>
 
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                data-bs-toggle="collapse"
-                data-bs-target="#c7"
-              >
-                Esqueci minha senha, como faço?
-              </button>
-            </h2>
-            <div id="c7" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                Acesse a página de <strong>Login</strong> e clique em
-                <strong>“Esqueci minha senha”</strong>. Siga os passos
-                informando seu e-mail cadastrado. Você receberá um link para
-                redefinir sua senha na sua caixa de entrada.
-              </div>
-            </div>
-          </div>
+    <!-- Pergunta 7 -->
+    <div class="col-md-6 mb-4">
+      <div class="faq-card">
+        <h4>As configurações ficam salvas?</h4>
+        <p>Sim! Suas preferências de contraste, modo simples e tamanho da fonte ficam salvas, mesmo que você feche o site ou mude de página.</p>
+      </div>
+    </div>
 
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                data-bs-toggle="collapse"
-                data-bs-target="#c8"
-              >
-                Como navegar entre as páginas do site?
-              </button>
-            </h2>
-            <div id="c8" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                Use a <strong>barra de navegação no topo da página</strong> para
-                acessar seções como <strong>Início</strong>,
-                <strong>Objetivo</strong>, <strong>Funcionalidades</strong>,
-                <strong>Conteúdo</strong> e <strong>FAQ</strong>. Basta clicar
-                em qualquer um dos itens para ser direcionado automaticamente.
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+    <!-- Pergunta 8 -->
+    <div class="col-md-6 mb-4">
+      <div class="faq-card">
+        <h4>Posso usar mais de uma função de acessibilidade ao mesmo tempo?</h4>
+        <p>Sim! Por exemplo, você pode ativar o Modo Simples e ainda aumentar o tamanho da fonte. Apenas o Contraste não pode ser usado junto com o Modo Simples.</p>
+      </div>
+    </div>
+
+    <!-- Pergunta 9 -->
+    <div class="col-md-6 mb-4">
+      <div class="faq-card">
+        <h4>O site funciona no celular e no computador?</h4>
+        <p>Sim! O site foi desenvolvido para funcionar perfeitamente em celulares, tablets e computadores, com acessibilidade garantida em todos.</p>
+      </div>
+    </div>
+
+        <!-- Pergunta 12 -->
+    <div class="col-md-6 mb-4">
+      <div class="faq-card">
+        <h4>Como posso entrar em contato?</h4>
+       <p>
+  Clique no botão <strong>“Ajuda”</strong> no canto da tela e depois em <strong>“Fale Conosco”</strong> para nos enviar um e-mail. Assim, você consegue tirar suas dúvidas ou pedir ajuda sempre que precisar.
+</p>
+
+      </div>
+    </div>
+  </div>
+
+    <!-- Pergunta 10 -->
+    <div class="col-md-6 mb-4">
+      <div class="faq-card">
+        <h4>Como utilizar os tutoriais?</h4>
+        <p>Na aba de tutoriais, clique no botão <strong>“Ver Tutorial”</strong> para abrir um vídeo explicativo e aprender passo a passo como usar aplicativos e ferramentas.</p>
+      </div>
+    </div>
+
+    <!-- Pergunta 11 -->
+    <div class="col-md-6 mb-4">
+      <div class="faq-card">
+        <h4>Como faço login ou cadastro?</h4>
+        <p>No topo da página, clique em <strong>“Login”</strong> ou <strong>“Cadastrar”</strong>. Insira seus dados e pronto! Você terá acesso completo ao site. Caso esteja no celular o menu irá parecer pelo simbolo "☰" no lado direito e basta clicar nele que as opções irão surgir. </p>
+      </div>
+    </div>
+
+    <!-- Pergunta 12 -->
+    <div class="col-md-6 mb-4">
+      <div class="faq-card">
+        <h4>Esqueci minha senha. O que fazer?</h4>
+        <p>No menu de <strong>Login</strong>, clique em <strong>“Esqueceu a senha?”</strong> e siga as instruções para recuperar seu acesso.<br>(ainda em desenvolvimento) </p>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
 
     <div class="text-center mb-5">
       <a href="index.html" class="btn btn-primary">Voltar para o Início</a>
@@ -435,41 +233,38 @@
       <div class="container">
         <div class="row">
           <!-- Sobre -->
-          <div class="col-md-4 mb-4">
-            <h5 class="fw-bold">Conectando Gerações</h5>
-            <p class="small">
-              Projeto Interdisciplinar de Inclusão Digital.<br />
-              Promovendo acessibilidade, inclusão e conexão através da
-              tecnologia.
-            </p>
-          </div>
+       <div class="col-md-4 mb-4">
+  <img src="images/icon-nav.png" alt="Logo Conectando Gerações" style="width: 80px;" class="mb-2" />
+  
+  <h5 class="fw-bold">Conectando Gerações</h5>
+  <p class="small">
+    Projeto Interdisciplinar de Inclusão Digital.<br />
+    Promovendo acessibilidade, inclusão e conexão através da tecnologia.
+  </p>
+</div>
+
 
           <!-- Links úteis -->
           <div class="col-md-4 mb-4">
             <h6 class="fw-bold mb-3">Navegação</h6>
             <ul class="list-unstyled">
               <li class="mb-2">
-                <a href="#" class="text-decoration-none text-light">Início</a>
+                <a href="index.html" class="text-decoration-none text-light">Início</a>
               </li>
               <li class="mb-2">
-                <a href="#objetivo" class="text-decoration-none text-light"
-                  >Objetivo</a
+                <a href="tutoriais.html" class="text-decoration-none text-light"
+                  >Tutoriais</a
+                >
+              </li>
+                            <li class="mb-2">
+                <a href="#conteudo" class="text-decoration-none text-light"
+                  >Jogos</a
                 >
               </li>
               <li class="mb-2">
                 <a
-                  href="#funcionalidades"
+                  href="duvidas.html"
                   class="text-decoration-none text-light"
-                  >Funcionalidades</a
-                >
-              </li>
-              <li class="mb-2">
-                <a href="#conteudo" class="text-decoration-none text-light"
-                  >Conteúdo</a
-                >
-              </li>
-              <li>
-                <a href="duvidas.html" class="text-decoration-none text-light"
                   >FAQ</a
                 >
               </li>
