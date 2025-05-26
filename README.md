@@ -1,37 +1,100 @@
 # pf-conectageracao
-Projeto desenvolvido para promover a acessibilidade digital de pessoas idosas, com uma interface simples, responsiva e amigável. O site inclui recursos como aumento de fonte, contraste e leitura por voz, facilitando o uso da tecnologia e incentivando a autonomia.
+Projeto Interdisciplinar focado na **Inclusão Digital de Idosos**, promovendo acessibilidade, autonomia e conexão através da tecnologia. Este site foi desenvolvido com recursos que garantem facilidade de navegação, leitura, compreensão e usabilidade para pessoas idosas ou com pouca familiaridade digital.
 
-1. Abrir a Página Inicial
+## 🎯 Funcionalidades Principais
+
+- ✅ Menu de Acessibilidade flutuante
+- ✅ Modo Simples (interface limpa e sem distrações)
+- ✅ Modo Contraste (fundo escuro, texto claro)
+- ✅ Aumento e diminuição de texto
+- ✅ Leitor de texto (Ler-Clique) – clique em textos para ouvir
+- ✅ Preferências salvas (permanece ativo ao navegar)
+- ✅ Resetar configurações
+- ✅ Tutoriais com vídeos interativos
+- ✅ Compatível com celular, tablet e computador
+
+---
+
+## 💻 Tecnologias Utilizadas
+
+- HTML5
+- CSS3
+- Bootstrap 5
+- JavaScript
+- LocalStorage para salvar preferências
+- Integração de vídeos do YouTube
+
+---
+
+### 🔷 1. Abrir a Página Inicial
 Acesse o site pelo GitHub Pages:
 🔗 https://lirolittleDev.github.io/pf-conectageracao
 Você verá uma interface limpa com botões grandes e textos claros, pensada para facilitar o uso por pessoas idosas.
 
-2. Ajustar a Legibilidade
-No topo da tela, estão os botões de acessibilidade:
+### 🔷 **2. Menu de Acessibilidade**
+- Localizado no canto superior direito (ícone azul de acessibilidade ⚙️).
+- Nele você encontra:
+  - **Modo Simples:** limpa o site, remove decorações e torna a navegação mais simples.
+  - **Contraste:** fundo preto, texto branco.
+  - **+ Texto / – Texto:** aumenta ou diminui o tamanho das letras.
+  - **Ler-Clique:** transforma o cursor em um leitor, onde você clica e o texto é lido em voz alta.
 
-A+ – Aumenta o tamanho da fonte
+---
 
-A- – Diminui o tamanho da fonte
+### ⚙️ **3. Ajustar o Tamanho da Letra**
+- Acesse o menu de acessibilidade.
+- Clique em **“+ Texto”** para aumentar ou **“- Texto”** para diminuir.
+- O tamanho ajustado permanece salvo enquanto você navega.
 
-Contraste – Alterna entre modo claro e escuro
+---
 
-🔊 Ler Página – Ativa a leitura em voz alta do conteúdo da tela e clicar novamente para parar
+### 🌓 **4. Usar o Modo Contraste**
+- Ativa fundo preto e texto branco, melhorando a leitura, especialmente para quem tem sensibilidade à luz ou baixa visão.
+- Desative clicando no botão novamente.
 
-Esses recursos funcionam automaticamente e guardam as preferências do usuário no navegador.
+---
 
-3. Acessar o Modo Simples (opcional)
-Ao clicar em “Modo Simples”, o site adapta o layout para uma versão mais direta, com menos elementos visuais — ideal para iniciantes no uso da internet.
+### 👁️‍🗨️ **5. Ativar o Ler-Clique**
+- Ative no menu de acessibilidade.
+- Seu cursor mudará de forma.
+- Clique sobre qualquer texto (títulos, parágrafos, listas) para ouvir a leitura.
+- Links e botões ficam desativados enquanto essa função está ativa, evitando navegação acidental.
+- Para desativar, clique no botão Ler-Clique novamente.
 
-4. Explorar os Conteúdos
-O site apresenta seções com:
+---
 
-Dicas práticas para idosos aprenderem tecnologia
+### ♻️ **6. Resetar Configurações**
+- Clique no botão flutuante **“Ajuda”** no canto inferior direito.
+- No menu que aparece, escolha **“Resetar Configurações”** para retornar tudo ao padrão.
 
-Ilustrações e imagens com legendas explicativas
+---
 
-Explicações em linguagem simples, com botões de leitura por voz
+### 📥 **7. As Configurações Ficam Salvas?**
+- Sim! O site mantém suas preferências de:
+  - Contraste
+  - Modo Simples
+  - Tamanho da fonte
+- Mesmo que você feche o navegador, ao voltar as preferências estarão mantidas.
 
-5. Área de Login
+---
+
+### 🎬 **8. Usar os Tutoriais**
+- Vá até a seção **Tutoriais** no menu.
+- Clique no botão **“Ver Tutorial”** do tema desejado.
+- O vídeo abrirá diretamente na página.
+- Abaixo do vídeo há um botão **“❌ Fechar Tutorial”** para escondê-lo quando quiser.
+
+### 📧 **9. Como Entrar em Contato**
+- Clique no botão **“Ajuda”** no canto inferior direito.
+- Selecione **“Fale Conosco”** para enviar um e-mail diretamente à equipe de suporte.
+
+---
+
+## 📱💻 * O site funciona no celular?**
+Sim! O site é totalmente responsivo, funcionando perfeitamente em celulares, tablets e computadores, mantendo todos os recursos de acessibilidade em qualquer dispositivo.
+
+
+## 📱* Área de Login ?**
 Há uma página de login que pode ser adaptada para integrar os usuarios para outras sessões, como cursos, vídeos ou perfis personalizados no futuro.
 
 💡 Observações
