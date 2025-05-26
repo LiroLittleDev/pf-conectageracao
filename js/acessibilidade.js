@@ -34,48 +34,48 @@ function decreaseFont() {
 
 
 function toggleContrast() {
-    const root = document.documentElement;
+  const root = document.documentElement;
 
-    if (document.body.classList.contains('modo-simples')) {
-        alert('O modo simples está ativado. Por favor, desative-o antes de ativar o contraste.');
-        return;
-    }
+  if (document.body.classList.contains('modo-simples')) {
+    alert('O modo simples está ativado. Por favor, desative-o antes de ativar o contraste.');
+    return;
+  }
 
-    const isActive = document.body.classList.contains('high-contrast');
+  const isActive = document.body.classList.contains('high-contrast');
 
-    const paginas = ['hero-section', 'login-body', 'cadastro-body', 'tutorial-body', 'duvidas-body'];
+  const paginas = ['hero-section', 'login-body', 'cadastro-body', 'tutorial-body', 'duvidas-body'];
 
-    if (isActive) {
-        // 🔥 DESATIVA CONTRASTE
-        document.body.classList.remove('high-contrast');
+  if (isActive) {
+    // 🔥 DESATIVA CONTRASTE
+    document.body.classList.remove('high-contrast');
 
-        paginas.forEach(pagina => {
-            document.querySelector(`.${pagina}`)?.classList.remove('high-contrast', 'high-contrast-hero');
-        });
+    paginas.forEach(pagina => {
+      document.querySelector(`.${pagina}`)?.classList.remove('high-contrast', 'high-contrast-hero');
+    });
 
-        document.body.style.background = '';
-        document.body.style.color = '';
-        root.style.setProperty('--primary-color', '#f08a81');
+    document.body.style.background = '';
+    document.body.style.color = '';
+    root.style.setProperty('--primary-color', '#f08a81');
 
-        localStorage.removeItem('highContrast');
-        mostrarAviso('Modo Contraste desativado!');
-    } else {
-        // 🔥 ATIVA CONTRASTE
-        document.body.classList.add('high-contrast');
+    localStorage.removeItem('highContrast');
+    mostrarAviso('Modo Contraste desativado!');
+  } else {
+    // 🔥 ATIVA CONTRASTE
+    document.body.classList.add('high-contrast');
 
-        paginas.forEach(pagina => {
-            document.querySelector(`.${pagina}`)?.classList.add('high-contrast', 'high-contrast-hero');
-        });
+    paginas.forEach(pagina => {
+      document.querySelector(`.${pagina}`)?.classList.add('high-contrast', 'high-contrast-hero');
+    });
 
-        document.body.style.background = '#535353';
-        document.body.style.color = '#fff';
-        root.style.setProperty('--primary-color', '#535353');
+    document.body.style.background = '#535353';
+    document.body.style.color = '#fff';
+    root.style.setProperty('--primary-color', '#535353');
 
-        localStorage.setItem('highContrast', 'true');
-        mostrarAviso('Modo Contraste ativado!');
-    }
+    localStorage.setItem('highContrast', 'true');
+    mostrarAviso('Modo Contraste ativado!');
+  }
 
-    atualizarEstadoBotoes();
+  atualizarEstadoBotoes();
 }
 
 
@@ -85,57 +85,57 @@ function ativarModoSimples() {
     return;
   }
 
-    const hero = document.querySelector('.hero-section');
+  const hero = document.querySelector('.hero-section');
 
   // Verifica se o modo simples já está ativado
-   if (document.body.classList.contains('modo-simples')) {
-        document.body.classList.remove('modo-simples');
-        hero?.classList.remove('modo-simples-hero');
-        mostrarAviso("Modo Simples desativado!");
-        localStorage.removeItem('modoSimples');
-    } else {
-        document.body.classList.add('modo-simples');
-        hero?.classList.add('modo-simples-hero');
-        mostrarAviso("Modo Simples ativado!");
-        localStorage.setItem('modoSimples', 'true');
-    }
-    atualizarEstadoBotoes();
+  if (document.body.classList.contains('modo-simples')) {
+    document.body.classList.remove('modo-simples');
+    hero?.classList.remove('modo-simples-hero');
+    mostrarAviso("Modo Simples desativado!");
+    localStorage.removeItem('modoSimples');
+  } else {
+    document.body.classList.add('modo-simples');
+    hero?.classList.add('modo-simples-hero');
+    mostrarAviso("Modo Simples ativado!");
+    localStorage.setItem('modoSimples', 'true');
+  }
+  atualizarEstadoBotoes();
 
 }
 
 function resetarConfiguracoes() {
-    const paginas = ['hero-section', 'login-body', 'cadastro-body', 'tutorial-body', 'faq-body'];
+  const paginas = ['hero-section', 'login-body', 'cadastro-body', 'tutorial-body', 'faq-body'];
 
-    // 🔥 Remove classes globais
-    document.body.classList.remove('high-contrast', 'modo-simples');
+  // 🔥 Remove classes globais
+  document.body.classList.remove('high-contrast', 'modo-simples');
 
-    // 🔥 Remove classes específicas de todas as páginas
-    paginas.forEach(pagina => {
-        document.querySelector(`.${pagina}`)?.classList.remove(
-            'high-contrast', 'high-contrast-hero', 'modo-simples', 'modo-simples-hero'
-        );
-    });
+  // 🔥 Remove classes específicas de todas as páginas
+  paginas.forEach(pagina => {
+    document.querySelector(`.${pagina}`)?.classList.remove(
+      'high-contrast', 'high-contrast-hero', 'modo-simples', 'modo-simples-hero'
+    );
+  });
 
-    // 🔥 Resetar tamanho da fonte para o padrão
-    fontSize = 16;
-    applyFontSize();
-    document.body.style.fontSize = ''; // Remove inline residual
+  // 🔥 Resetar tamanho da fonte para o padrão
+  fontSize = 16;
+  applyFontSize();
+  document.body.style.fontSize = ''; // Remove inline residual
 
-    // 🔥 Limpa preferências do localStorage
-    localStorage.removeItem('highContrast');
-    localStorage.removeItem('modoSimples');
-    localStorage.removeItem('fontSize');
-    localStorage.removeItem('toolbar');
+  // 🔥 Limpa preferências do localStorage
+  localStorage.removeItem('highContrast');
+  localStorage.removeItem('modoSimples');
+  localStorage.removeItem('fontSize');
+  localStorage.removeItem('toolbar');
 
-    // 🔥 Reseta variáveis de CSS customizadas
-    document.body.style.background = '';
-    document.body.style.color = '';
-    document.documentElement.style.setProperty('--primary-color', '#f08a81');
+  // 🔥 Reseta variáveis de CSS customizadas
+  document.body.style.background = '';
+  document.body.style.color = '';
+  document.documentElement.style.setProperty('--primary-color', '#f08a81');
 
-    // 🔥 Remove marcação de botões ativos
-    document.querySelectorAll('.btn.active').forEach(btn => btn.classList.remove('active'));
+  // 🔥 Remove marcação de botões ativos
+  document.querySelectorAll('.btn.active').forEach(btn => btn.classList.remove('active'));
 
-    mostrarAviso('Configurações Redefinidas!');
+  mostrarAviso('Configurações Redefinidas!');
 }
 
 
@@ -146,8 +146,7 @@ function toggleModoLeitura() {
   modoLeituraAtivo = !modoLeituraAtivo;
 
   if (modoLeituraAtivo) {
-    document.body.style.cursor = 'url("../images/cursor-ler-clique.png"), pointer';
-
+    document.body.style.cursor = 'url("images/cursor-lc.png"), auto';
     document.addEventListener('click', leitorDeTexto);
     document.querySelectorAll('button').forEach(btn => {
       btn.addEventListener('mouseenter', leitorHoverBotao);
@@ -174,6 +173,7 @@ function toggleModoLeitura() {
 
   atualizarEstadoBotoes();
 }
+
 
 // 🔥 Função que bloqueia clique em links no modo leitura
 function bloquearLinks(e) {

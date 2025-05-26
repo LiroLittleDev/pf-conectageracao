@@ -1,7 +1,7 @@
 :root {
   --primary-color: #f08a81; /* Vibrant Coral */
   --secondary-color: #ffcccb; /* Soft Pink */
-  --background-color: #fefefe; /* Light Background */
+  --background-color: #ffbbb4;
   --text-color: #535353; /* Dark Gray */
   --accent-color: #fff; /* Peach Accent */
 }
@@ -13,7 +13,6 @@
 .link-bloqueado {
   pointer-events: none; /* Opcional — impede clique físico também */
   opacity: 0.6;
-  cursor: not-allowed;
   text-decoration: none;
 }
 
