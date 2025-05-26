@@ -3,6 +3,7 @@ function criarToolbarAcessibilidade() {
     toolbar.className = "accessibility-toolbar";
 
     toolbar.innerHTML = `
+    <style>
         .toolbar-container { 
             display: flex; 
             align-items: center; 
@@ -51,7 +52,7 @@ function criarToolbarAcessibilidade() {
                 width: 60%; 
             } 
         }
-
+</style>
         <img src="images/icon-acessibilidade.png" alt="Acessibilidade" style="width: 60px; height: 50px;"> 
         <button id="btn-simples" class="btn btn-light" onclick="ativarModoSimples()">Modo Simples</button> 
         <button class="btn btn-light" onclick="increaseFont()">+ Texto</button> 
