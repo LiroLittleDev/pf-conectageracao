@@ -130,6 +130,7 @@ function atualizarEstadoBotoes() {
   }
 }
 
+
 function toggleToolbar() {
   const toolbar = document.getElementById("toolbar");
   if (!toolbar) return;
@@ -138,10 +139,13 @@ function toggleToolbar() {
 
   if (isVisible) {
     toolbar.style.display = "none";
-    localStorage.setItem("toolbar", "fechado");
+    localStorage.setItem("toolbarAberta", "false");
   } else {
     toolbar.style.display = "flex";
-    localStorage.setItem("toolbar", "aberto");
+    localStorage.setItem("toolbarAberta", "true");
+    
+    // 🔥 Garante que os botões reflitam o estado atual da página
+    atualizarEstadoBotoes();
   }
 }
 

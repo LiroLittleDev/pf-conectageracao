@@ -6,12 +6,9 @@ function updatePreferences() {
   localStorage.setItem('modoSimples', document.body.classList.contains('modo-simples'));
 }
 
-window.onload = () => {
-  applyFontSize();
-};
 
 function applyFontSize() {
-  const elementos = document.querySelectorAll('p, h2');
+  const elementos = document.querySelectorAll('p, h2, div');
   elementos.forEach(el => el.style.fontSize = fontSize + 'px');
 }
 
@@ -235,11 +232,6 @@ function removerEmojis(texto) {
     ''
   );
 }
-
-
-
-
-
 
 function mostrarAviso(mensagem, cor = '#faac1c') {
   let container = document.querySelector('.toast-container');
