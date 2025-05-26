@@ -10,13 +10,14 @@
       rel="stylesheet"
     />
     <!-- CSS da Página -->
+         <link rel="stylesheet" href="css/duvidas.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/duvidas.css" />
+
   </head>
 
   <body class="faq-body">
 
-<nav class="navbar bg-navbar navbar-expand-lg navbar-light bg-navbar shadow-sm py-3">
+    <nav class="navbar bg-navbar navbar-expand-lg navbar-light bg-navbar shadow-sm py-3">
       <div class="container">
         <!-- Logo -->
         <a class="d-flex align-items-center gap-2" href="index.html">
@@ -65,47 +66,45 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link fw-semibold" href="duvidas.html">FAQ</a>
+              <a class="nav-link fw-semibold" href="duvidas.html"
+                >FAQ</a
+              >
             </li>
             <li class="nav-item">
               <a class="btn btn-primary fw-semibold px-4 ms-lg-2" href="login.html"> Login </a>
             </li>
             <li class="nav-item">
-              <a
-                class="btn btn-primary fw-semibold px-4 ms-lg-2"
-                href="cadastro.html"
-                >Cadastro</a
-              >
+              <a class="btn btn-primary fw-semibold px-4 ms-lg-2" href="cadastro.html">
+                Cadastro
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-
-    <header class="faq-header text-center">
-      <div class="container">
+    <header class="faq-header">
         <h1 class="fw-bold">Perguntas Frequentes</h1>
         <h3 class="lead">
           Tire suas dúvidas sobre como usar a plataforma<br />de forma simples e
           prática
         </h3>
-      </div>
     </header>
 
     <main class="container my-5">
+      
       <!-- Seleção de Dispositivo -->
       <section class="faq-device-select text-center mb-5">
-        <h3 class="fw-semibold mb-3">Como você está acessando?</h3>
-        <p>Escolha o dispositivo para ver instruções específicas:</p>
+        <h3 class="fw-semibold mb-3 ">Como você está acessando?</h3>
+        <h3>Escolha o dispositivo para ver instruções específicas:</h3>
         <button
-          class="btn btn-primary px-4 me-2"
+          class="btn btn-primary px-4 me-2 mt-5"
           onclick="showFAQ('mobile')"
         >
           📱 Celular
         </button>
         <button
-          class="btn btn-primary px-4"
+          class="btn btn-primary px-4 mt-5"
           onclick="showFAQ('computer')"
         >
           💻 Computador
@@ -429,10 +428,10 @@
     </main>
 
     <div class="text-center mb-5">
-      <a href="index.html" class="btn btn-primary px-4">Voltar para o Início</a>
+      <a href="index.html" class="btn btn-primary">Voltar para o Início</a>
     </div>
 
-    <footer class="container-footer">
+   <footer class="container-footer">
       <div class="container">
         <div class="row">
           <!-- Sobre -->

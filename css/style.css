@@ -10,6 +10,12 @@
   display: none;
 }
 
+.link-bloqueado {
+  pointer-events: none; /* Opcional — impede clique físico também */
+  opacity: 0.6;
+  cursor: not-allowed;
+  text-decoration: none;
+}
 
 body {
   background: url("../images/background.png") no-repeat center center fixed;
@@ -47,6 +53,14 @@ body {
 .accessibility-toolbar .dropdown-item.active {
   background-color: #f5581a !important;
   color: #fff !important;
+}
+
+@media (max-width: 767.98px) {
+  #btn-leitor {
+    padding: 12px 16px;
+    font-size: 1rem;
+    border-radius: 0px 0px 0px 35px;
+  }
 }
 
 .navbar {
@@ -265,15 +279,6 @@ h3{
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s, background-color 0.2s;
   padding: 12px 16px;
-}
-
-@media screen and (max-width: 576px) {
-  #btn-contraste {
-    padding: 12px 16px;
-    font-size: 1rem;
-    border-radius: 0px 0px 0px 35px;
-  }
-  
 }
 
 .btn:hover {

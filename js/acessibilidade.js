@@ -142,42 +142,104 @@ function resetarConfiguracoes() {
 }
 
 
+let modoLeituraAtivo = false;
+let lendo = false;
 
+function toggleModoLeitura() {
+  modoLeituraAtivo = !modoLeituraAtivo;
 
-function lerTexto(selector) {
-  const element = document.querySelector(selector);
-  if (element) {
-    const textoOriginal = element.textContent || element.innerText;
-    const textoLimpo = removerEmojis(textoOriginal);
-    const speech = new SpeechSynthesisUtterance(textoLimpo);
-    speech.lang = "pt-BR";
-    speech.rate = 0.9;
-    if (window.speechSynthesis.speaking) {
-      window.speechSynthesis.cancel();
-    } else {
-      window.speechSynthesis.speak(speech);
-    }
-  } else {
-    console.error(`Elemento não encontrado para o seletor: ${selector}`);
-  }
-}
+  if (modoLeituraAtivo) {
+    document.body.style.cursor = 'url("../images/cursor-ler-clique.png"), pointer';
 
-function lerClasse(className) {
-  const elements = document.getElementsByClassName(className);
-  if (elements.length > 0) {
-    Array.from(elements).forEach((element) => {
-      const textoOriginal = element.textContent || element.innerText;
-      const textoLimpo = removerEmojis(textoOriginal);
-      const speech = new SpeechSynthesisUtterance(textoLimpo);
-      speech.lang = "pt-BR";
-      speech.rate = 0.9;
-      window.speechSynthesis.cancel();
-      window.speechSynthesis.speak(speech);
+    document.addEventListener('click', leitorDeTexto);
+    document.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('mouseenter', leitorHoverBotao);
     });
+
+    document.addEventListener('click', bloquearLinks, true); // 🔥 Aqui bloqueia links
+
+    mostrarAviso('Ler-Clique ativado!');
   } else {
-    console.error(`Nenhum elemento encontrado para a classe: ${className}`);
+    document.body.style.cursor = 'auto';
+
+    document.removeEventListener('click', leitorDeTexto);
+    document.querySelectorAll('button').forEach(btn => {
+      btn.removeEventListener('mouseenter', leitorHoverBotao);
+    });
+
+    document.removeEventListener('click', bloquearLinks, true); // 🔓 Desbloqueia os links
+
+    window.speechSynthesis.cancel();
+    lendo = false;
+
+    mostrarAviso('Ler-Clique desativado!');
+  }
+
+  atualizarEstadoBotoes();
+}
+
+// 🔥 Função que bloqueia clique em links no modo leitura
+function bloquearLinks(e) {
+  if (e.target.closest('a')) {
+    e.preventDefault();
   }
 }
+
+// 🔥 Leitor ao clicar nos textos
+function leitorDeTexto(e) {
+  const tag = e.target.tagName.toLowerCase();
+  const tagsPermitidas = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'li', 'span', 'div', 'button', 'a'];
+
+  if (!tagsPermitidas.includes(tag)) return;
+
+  const texto = removerEmojis(e.target.innerText.trim());
+  if (!texto) return;
+
+  if (lendo) {
+    window.speechSynthesis.cancel();
+    lendo = false;
+    return;
+  }
+
+  falarTexto(texto);
+}
+
+// 🔥 Leitor ao passar o mouse sobre botões
+function leitorHoverBotao(e) {
+  const texto = removerEmojis(e.target.innerText.trim());
+  if (!texto) return;
+
+  window.speechSynthesis.cancel();
+  falarTexto(texto);
+}
+
+// 🔊 Função única para falar texto
+function falarTexto(texto) {
+  const utterance = new SpeechSynthesisUtterance(texto);
+  utterance.lang = 'pt-BR';
+  utterance.rate = 1;
+  utterance.pitch = 1;
+  utterance.volume = 1;
+
+  window.speechSynthesis.speak(utterance);
+  lendo = true;
+
+  utterance.onend = () => {
+    lendo = false;
+  };
+}
+
+function removerEmojis(texto) {
+  return texto.replace(
+    /([\u2700-\u27BF]|[\uE000-\uF8FF]|[\uD83C-\uDBFF\uDC00-\uDFFF]|[\u200D\uFE0F]|\p{Emoji_Presentation}|\p{Extended_Pictographic})+/gu,
+    ''
+  );
+}
+
+
+
+
+
 
 function mostrarAviso(mensagem, cor = '#faac1c') {
   let container = document.querySelector('.toast-container');

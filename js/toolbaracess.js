@@ -1,6 +1,6 @@
 function criarToolbarAcessibilidade() {
-  const toolbar = document.createElement('div');
-  toolbar.className = 'accessibility-toolbar';
+  const toolbar = document.createElement("div");
+  toolbar.className = "accessibility-toolbar";
 
   toolbar.innerHTML = `
 <style>
@@ -57,7 +57,9 @@ function criarToolbarAcessibilidade() {
 
     .toolbar button {
       width: 60%;
+
     }
+      
   }
 </style>
 
@@ -73,69 +75,79 @@ function criarToolbarAcessibilidade() {
     <button class="btn btn-light" onclick="increaseFont()">+ Texto</button>
     <button class="btn btn-light" onclick="decreaseFont()">- Texto</button>
     <button id="btn-contraste" class="btn btn-light" onclick="toggleContrast()">Contraste</button>
+    <button id="btn-leitor" class="btn btn-light" onclick="toggleModoLeitura()" >
+        Ler-Clique
+</button>
   </div>
 </div>
 
   `;
 
   document.body.insertBefore(toolbar, document.body.firstChild);
-
 }
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener("DOMContentLoaded", () => {
   criarToolbarAcessibilidade();
 
-  const nav = document.getElementById('navbar');
+  const nav = document.getElementById("navbar");
   if (nav) {
-    nav.insertAdjacentElement('afterend', document.querySelector('.accessibility-toolbar'));
+    nav.insertAdjacentElement(
+      "afterend",
+      document.querySelector(".accessibility-toolbar")
+    );
   }
 });
 
 function atualizarEstadoBotoes() {
-  const btnSimples = document.getElementById('btn-simples');
-  const btnSimplesMobile = document.getElementById('btn-simples-mobile');
-  const btnContraste = document.getElementById('btn-contraste');
-  const btnContrasteMobile = document.getElementById('btn-contraste-mobile');
+  const btnSimples = document.getElementById("btn-simples");
+  const btnSimplesMobile = document.getElementById("btn-simples-mobile");
+  const btnContraste = document.getElementById("btn-contraste");
+  const btnContrasteMobile = document.getElementById("btn-contraste-mobile");
+  const btnLeitor = document.getElementById("btn-leitor"); //
 
-  // Estado do botão Modo Simples
-  if (document.body.classList.contains('modo-simples')) {
-    btnSimples?.classList.add('active');
-    btnSimplesMobile?.classList.add('active');
+  // ✔️ Estado do botão Modo Simples
+  if (document.body.classList.contains("modo-simples")) {
+    btnSimples?.classList.add("active");
+    btnSimplesMobile?.classList.add("active");
   } else {
-    btnSimples?.classList.remove('active');
-    btnSimplesMobile?.classList.remove('active');
+    btnSimples?.classList.remove("active");
+    btnSimplesMobile?.classList.remove("active");
   }
 
-  // Estado do botão Contraste
-  if (document.body.classList.contains('high-contrast')) {
-    btnContraste?.classList.add('active');
-    btnContrasteMobile?.classList.add('active');
+  // ✔️ Estado do botão Contraste
+  if (document.body.classList.contains("high-contrast")) {
+    btnContraste?.classList.add("active");
+    btnContrasteMobile?.classList.add("active");
   } else {
-    btnContraste?.classList.remove('active');
-    btnContrasteMobile?.classList.remove('active');
+    btnContraste?.classList.remove("active");
+    btnContrasteMobile?.classList.remove("active");
+  }
+
+  // ✔️ Estado do botão Leitor por Clique
+  if (modoLeituraAtivo) {
+    btnLeitor?.classList.add("active");
+  } else {
+    btnLeitor?.classList.remove("active");
   }
 }
-
 
 function toggleToolbar() {
-    const toolbar = document.getElementById('toolbar');
-    if (!toolbar) return;
+  const toolbar = document.getElementById("toolbar");
+  if (!toolbar) return;
 
-    const isVisible = toolbar.style.display === 'flex';
+  const isVisible = toolbar.style.display === "flex";
 
-    if (isVisible) {
-        toolbar.style.display = 'none';
-        localStorage.setItem('toolbar', 'fechado');
-    } else {
-        toolbar.style.display = 'flex';
-        localStorage.setItem('toolbar', 'aberto');
-    }
+  if (isVisible) {
+    toolbar.style.display = "none";
+    localStorage.setItem("toolbar", "fechado");
+  } else {
+    toolbar.style.display = "flex";
+    localStorage.setItem("toolbar", "aberto");
+  }
 }
 
-
-
 (function criarBotaoAjuda() {
-  const botao = document.createElement('button');
-  botao.innerText = 'Ajuda';
+  const botao = document.createElement("button");
+  botao.innerText = "Ajuda";
   botao.style = `
     position: fixed;
     bottom: 20px;
@@ -153,16 +165,16 @@ function toggleToolbar() {
     transition: transform 0.2s, box-shadow 0.2s;
   `;
 
-  botao.addEventListener('mouseenter', () => {
-    botao.style.transform = 'scale(1.08)';
-    botao.style.boxShadow = '0 10px 24px rgba(0,0,0,0.30)';
+  botao.addEventListener("mouseenter", () => {
+    botao.style.transform = "scale(1.08)";
+    botao.style.boxShadow = "0 10px 24px rgba(0,0,0,0.30)";
   });
-  botao.addEventListener('mouseleave', () => {
-    botao.style.transform = 'scale(1)';
-    botao.style.boxShadow = '0 6px 16px rgba(0,0,0,0.25)';
+  botao.addEventListener("mouseleave", () => {
+    botao.style.transform = "scale(1)";
+    botao.style.boxShadow = "0 6px 16px rgba(0,0,0,0.25)";
   });
 
-  const menu = document.createElement('div');
+  const menu = document.createElement("div");
   menu.style = `
     position: fixed;
     bottom: 80px;
@@ -182,37 +194,50 @@ function toggleToolbar() {
   `;
 
   const opcoes = [
-    { label: 'Dúvidas Frequentes', action: () => window.location.href = 'duvidas.html' },
-    { label: 'Fale Conosco', action: () => window.location.href = 'mailto:ConectandoGeracoes@gmail.com' },
-    { label: 'Resetar Configurações', action: () => { resetarConfiguracoes(); esconderMenu(); } }
+    {
+      label: "Dúvidas Frequentes",
+      action: () => (window.location.href = "duvidas.html"),
+    },
+    {
+      label: "Fale Conosco",
+      action: () =>
+        (window.location.href = "mailto:ConectandoGeracoes@gmail.com"),
+    },
+    {
+      label: "Resetar Configurações",
+      action: () => {
+        resetarConfiguracoes();
+        esconderMenu();
+      },
+    },
   ];
 
-  const ul = document.createElement('ul');
-  ul.style.listStyle = 'none';
-  ul.style.margin = '0';
-  ul.style.padding = '10px 0';
+  const ul = document.createElement("ul");
+  ul.style.listStyle = "none";
+  ul.style.margin = "0";
+  ul.style.padding = "10px 0";
 
   opcoes.forEach((opcao, idx) => {
-    const li = document.createElement('li');
+    const li = document.createElement("li");
     li.innerText = opcao.label;
     li.style = `
       padding: 12px 24px;
       cursor: pointer;
-      ${idx < opcoes.length - 1 ? 'border-bottom: 1px solid #f2f2f2;' : ''}
+      ${idx < opcoes.length - 1 ? "border-bottom: 1px solid #f2f2f2;" : ""}
       transition: background 0.18s, color 0.18s;
     `;
 
-    li.addEventListener('mouseover', () => {
-      li.style.background = '#ffecd2';
-      li.style.color = '#ff7f50';
+    li.addEventListener("mouseover", () => {
+      li.style.background = "#ffecd2";
+      li.style.color = "#ff7f50";
     });
 
-    li.addEventListener('mouseout', () => {
-      li.style.background = 'transparent';
-      li.style.color = '#222';
+    li.addEventListener("mouseout", () => {
+      li.style.background = "transparent";
+      li.style.color = "#222";
     });
 
-    li.addEventListener('click', () => {
+    li.addEventListener("click", () => {
       opcao.action();
     });
 
@@ -224,31 +249,31 @@ function toggleToolbar() {
   document.body.appendChild(menu);
 
   function mostrarMenu() {
-    menu.style.display = 'block';
+    menu.style.display = "block";
     setTimeout(() => {
-      menu.style.opacity = '1';
-      menu.style.transform = 'translateY(0)';
+      menu.style.opacity = "1";
+      menu.style.transform = "translateY(0)";
     }, 10);
   }
 
   function esconderMenu() {
-    menu.style.opacity = '0';
-    menu.style.transform = 'translateY(20px)';
+    menu.style.opacity = "0";
+    menu.style.transform = "translateY(20px)";
     setTimeout(() => {
-      menu.style.display = 'none';
+      menu.style.display = "none";
     }, 250);
   }
 
-  botao.addEventListener('click', (e) => {
+  botao.addEventListener("click", (e) => {
     e.stopPropagation();
-    if (menu.style.display === 'none' || menu.style.opacity === '0') {
+    if (menu.style.display === "none" || menu.style.opacity === "0") {
       mostrarMenu();
     } else {
       esconderMenu();
     }
   });
 
-  document.addEventListener('click', (e) => {
+  document.addEventListener("click", (e) => {
     if (!botao.contains(e.target) && !menu.contains(e.target)) {
       esconderMenu();
     }

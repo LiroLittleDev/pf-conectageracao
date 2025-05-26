@@ -19,8 +19,6 @@ window.onload = () => {
         });
     }
 
-    
-
     // ✔️ Aplica Modo Simples
     if (preferencias.modoSimples) {
         aplicarClasse('modo-simples', '-hero');
