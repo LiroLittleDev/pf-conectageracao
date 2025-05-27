@@ -26,10 +26,12 @@ Projeto Interdisciplinar focado na **Inclusão Digital de Idosos**, promovendo a
 
 ---
 
-### 🔷 1. Abrir a Página Inicial
+### 💡 1. Abrir a Página Inicial
 Acesse o site pelo GitHub Pages:
 🔗 https://lirolittleDev.github.io/pf-conectageracao
 Você verá uma interface limpa com botões grandes e textos claros, pensada para facilitar o uso por pessoas idosas.
+
+---
 
 ### 🔷 **2. Menu de Acessibilidade**
 - Localizado no canto superior direito (ícone azul de acessibilidade ⚙️).
@@ -89,16 +91,29 @@ Você verá uma interface limpa com botões grandes e textos claros, pensada par
 - Selecione **“Fale Conosco”** para enviar um e-mail diretamente à equipe de suporte.
 
 ---
+## 📱💻 Compatibilidade e Acessibilidade
 
-## 📱💻 * O site funciona no celular?**
-Sim! O site é totalmente responsivo, funcionando perfeitamente em celulares, tablets e computadores, mantendo todos os recursos de acessibilidade em qualquer dispositivo.
+O site é **100% responsivo**, adaptando-se perfeitamente a **celulares, tablets e computadores**. Todos os recursos de **acessibilidade, navegação e usabilidade** estão disponíveis em qualquer dispositivo.
 
+✅ **Funciona direto no navegador**, sem necessidade de instalação.
 
-## 📱* Área de Login ?**
-Há uma página de login que pode ser adaptada para integrar os usuarios para outras sessões, como cursos, vídeos ou perfis personalizados no futuro.
+---
 
-💡 Observações
-Todo o projeto é responsivo e acessível, seguindo princípios de usabilidade para o público.
+## 🔐 Área de Login
 
-Funciona em qualquer navegador moderno, sem necessidade de instalação.
+O projeto possui uma **área de login funcional**, estruturada para permitir futuras implementações, como:
+
+- 👥 Acesso a perfis personalizados;
+- 🎥 Área de cursos, vídeos ou conteúdos restritos;
+- 📝 Gestão de certificados ou eventos.
+
+---
+
+## 💡 Observações
+
+- 🚀 Todo o projeto foi desenvolvido seguindo princípios de **acessibilidade, responsividade e usabilidade**, garantindo uma experiência intuitiva para todos os públicos, incluindo pessoas idosas e pessoas com deficiências.
+- 🔧 Nenhum software adicional é necessário. Basta acessar pelo navegador de sua preferência.
+
+---
+
 
