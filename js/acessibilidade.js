@@ -10,7 +10,7 @@ function updatePreferences() {
 
 // 🔥 Aplica o tamanho da fonte nos elementos definidos
 function applyFontSize() {
-  const elementos = document.querySelectorAll('p, h2, div');
+  const elementos = document.querySelectorAll('p, h2, h3, h4, h5, li');
   elementos.forEach(el => el.style.fontSize = fontSize + 'px');
 }
 

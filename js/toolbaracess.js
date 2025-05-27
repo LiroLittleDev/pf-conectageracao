@@ -1,7 +1,9 @@
+// Toolbar de Acessibilidade
 function criarToolbarAcessibilidade() {
   const toolbar = document.createElement("div");
   toolbar.className = "accessibility-toolbar";
 
+//* Estilo da toolbar na pagina */
   toolbar.innerHTML = `
 <style>
   .toolbar-container {
@@ -85,6 +87,7 @@ function criarToolbarAcessibilidade() {
 
   document.body.insertBefore(toolbar, document.body.firstChild);
 }
+// Cria a toolbar de acessibilidade ao carregar a página
 window.addEventListener("DOMContentLoaded", () => {
   criarToolbarAcessibilidade();
 
@@ -97,6 +100,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// funcionalidade para fixar a ativação de das funções de acessibilidade como modo-simples, contraste e leitor
 function atualizarEstadoBotoes() {
   const btnSimples = document.getElementById("btn-simples");
   const btnSimplesMobile = document.getElementById("btn-simples-mobile");
@@ -130,7 +134,7 @@ function atualizarEstadoBotoes() {
   }
 }
 
-
+// Funcionalidade para esconder e mostrar a toolbar
 function toggleToolbar() {
   const toolbar = document.getElementById("toolbar");
   if (!toolbar) return;
@@ -149,6 +153,7 @@ function toggleToolbar() {
   }
 }
 
+// Funcionalidade para criar o botão de ajuda
 (function criarBotaoAjuda() {
   const botao = document.createElement("button");
   botao.innerText = "Ajuda";
