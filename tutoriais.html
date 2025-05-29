@@ -1,281 +1,234 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tutoriais - Conectando Gerações</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-        <link
-      rel="icon"
-      type="image/png"
-      href="images/icon-nav.png"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/tutoriais.css" />
-    <link rel="stylesheet" href="css/chatgpt.css">
-  </head>
 
-  <body class="tutorial-body">
-    
-    <nav class="navbar bg-navbar navbar-expand-lg navbar-light bg-navbar shadow-sm py-3">
-      <div class="container">
-        <!-- Logo -->
-        <a class="d-flex align-items-center gap-2" href="index.html">
-          <img
-            src="images/icon-nav.png"
-            alt="Ícone do projeto"
-            class="logo-icon"
-          />
-          <img
-            src="images/logo-conectandogeracoescut.png"
-            alt="Texto Conectando Gerações"
-            class="logo-text"
-          />
-        </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutoriais - Conectando Gerações</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="images/icon-nav.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/tutoriais.css" />
+  <link rel="stylesheet" href="css/chatgpt.css">
+</head>
 
-        <!-- Botão de menu mobile -->
-        <button
-          class="navbar-toggler border-0"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Alternar navegação"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+<body class="tutorial-body">
 
-        <!-- Links do menu -->
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav gap-lg-4 align-items-lg-center">
-            <li class="nav-item">
-              <a
-                class="nav-link fw-semibold"
-                aria-current="page"
-                href="index.html"
-                >Início</a
-              >
+  <nav class="navbar bg-navbar navbar-expand-lg navbar-light bg-navbar shadow-sm py-3">
+    <div class="container">
+      <!-- Logo -->
+      <a class="d-flex align-items-center gap-2" href="index.html">
+        <img src="images/icon-nav.png" alt="Ícone do projeto" class="logo-icon" />
+        <img src="images/logo-conectandogeracoescut.png" alt="Texto Conectando Gerações" class="logo-text" />
+      </a>
+
+      <!-- Botão de menu mobile -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links do menu -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav gap-lg-4 align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" aria-current="page" href="index.html">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="tutoriais.html">Tutoriais</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="duvidas.html">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-primary fw-semibold px-4 ms-lg-2" href="login.html"> Login </a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-primary fw-semibold px-4 ms-lg-2" href="cadastro.html">Cadastro</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="tutorial-header">
+    <h1>Tutoriais Práticos</h1>
+    <h3 class="lead">
+      Aprenda a dominar a tecnologia com tutoriais rápidos e simples. <br>Clique no que deseja aprender e comece agora!
+    </h3>
+  </header>
+
+  <div id="video-container" class="text-center my-4 d-none">
+    <div class="ratio ratio-16x9 mb-3">
+      <iframe id="video-frame" src="" title="Tutorial" allowfullscreen></iframe>
+    </div>
+    <button class="btn btn-outline-danger" onclick="fecharVideo()">
+      ❌ Fechar Tutorial
+    </button>
+  </div>
+
+
+  <main class="container my-5">
+    <div class="row g-4">
+      <!-- Tutorial 1 -->
+      <div class="col-md-4">
+        <div class="card tutorial-card">
+          <img src="images/tutorial/whatsapp-tuto.png" class="card-img-top" alt="Tutorial WhatsApp" />
+          <div class="card-body">
+            <h5 class="card-title tutorial-card-title">Como usar o WhatsApp</h5>
+            <p class="card-text tutorial-card-text">
+              Aprenda a enviar mensagens, fazer chamadas, enviar fotos e usar figurinhas no WhatsApp de forma simples.
+            </p>
+            <button class="btn tutorial-btn" onclick="carregarVideo('DG5sqJJubR0')">Ver Tutorial</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tutorial 2 -->
+      <div class="col-md-4">
+        <div class="card tutorial-card">
+          <img src="images/tutorial/youtube-tuto.jpg" class="card-img-top" alt="Tutorial YouTube" />
+          <div class="card-body">
+            <h5 class="card-title tutorial-card-title">Como assistir vídeos no YouTube</h5>
+            <p class="card-text tutorial-card-text">
+              Descubra como procurar vídeos, assistir, se inscrever em canais e ativar legendas no YouTube.
+            </p>
+            <button class="btn tutorial-btn" onclick="carregarVideo('FyOF8AZip1o')">Ver Tutorial</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tutorial 3 -->
+      <div class="col-md-4">
+        <div class="card tutorial-card">
+          <img src="images/tutorial/chatgpt-tuto.jpg" class="card-img-top" alt="Tutorial ChatGPT" />
+          <div class="card-body">
+            <h5 class="card-title tutorial-card-title">Como baixar e usar o ChatGPT</h5>
+            <p class="card-text tutorial-card-text">
+              Veja como baixar o aplicativo do ChatGPT, criar sua conta e começar a conversar com a inteligência
+              artificial.
+            </p>
+            <button class="btn tutorial-btn" onclick="carregarVideo('mNUYSVJM0JM')">Ver Tutorial</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tutorial 4 -->
+      <div class="col-md-4">
+        <div class="card tutorial-card">
+          <img src="images/tutorial/googlemaps-tuto.jpg" class="card-img-top" alt="Tutorial Google Maps" />
+          <div class="card-body">
+            <h5 class="card-title tutorial-card-title">Como usar o Google Maps</h5>
+            <p class="card-text tutorial-card-text">
+              Descubra como usar o Google Maps para ver locais, traçar rotas, encontrar restaurantes e chegar ao seu
+              destino com facilidade.
+            </p>
+            <button class="btn tutorial-btn" onclick="carregarVideo('8BnAjht1amA')">Ver Tutorial</button>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Tutorial 5 -->
+      <div class="col-md-4">
+        <div class="card tutorial-card">
+          <img src="images/tutorial/qrcode-tuto.jpg" class="card-img-top" alt="Tutorial QR Code" />
+          <div class="card-body">
+            <h5 class="card-title tutorial-card-title">Como escanear QR Code</h5>
+            <p class="card-text tutorial-card-text">
+              Aprenda de forma simples como usar a câmera do celular para escanear QR Codes em pagamentos, links,
+              cardápios ou Wi-Fi.
+            </p>
+            <button class="btn tutorial-btn" onclick="carregarVideo('-KHRXNMc60E')">Ver Tutorial</button>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Tutorial 6 -->
+      <div class="col-md-4">
+        <div class="card tutorial-card">
+          <img src="images/tutorial/senha-tuto.png" class="card-img-top" alt="Tutorial Senhas" />
+          <div class="card-body">
+            <h5 class="card-title tutorial-card-title">Como criar senhas seguras</h5>
+            <p class="card-text tutorial-card-text">
+              Aprenda dicas simples e práticas para criar senhas fortes, seguras e proteger suas contas na internet.
+            </p>
+            <button class="btn tutorial-btn" onclick="carregarVideo('DhXaVsnhhNM')">Ver Tutorial</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="text-center mb-5">
+    <a href="index.html" class="btn btn-primary btn-sm mt-3">← Voltar ao Início</a>
+  </div>
+
+  <footer class="container-footer">
+    <div class="container">
+      <div class="row">
+        <!-- Sobre -->
+        <div class="col-md-4 mb-4">
+          <img src="images/icon-nav.png" alt="Logo Conectando Gerações" style="width: 80px;" class="mb-2" />
+
+          <h5 class="fw-bold">Conectando Gerações</h5>
+          <p class="small">
+            Projeto Interdisciplinar de Inclusão Digital.<br />
+            Promovendo acessibilidade, inclusão e conexão através da tecnologia.
+          </p>
+        </div>
+
+
+        <!-- Links úteis -->
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold mb-3">Navegação</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <a href="index.html" class="text-decoration-none text-light">Início</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link fw-semibold" href="tutoriais.html"
-                >Tutoriais</a
-              >
+            <li class="mb-2">
+              <a href="tutoriais.html" class="text-decoration-none text-light">Tutoriais</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link fw-semibold" href="duvidas.html">FAQ</a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-primary fw-semibold px-4 ms-lg-2" href="login.html"> Login </a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="btn btn-primary fw-semibold px-4 ms-lg-2"
-                href="cadastro.html"
-                >Cadastro</a
-              >
+            <li class="mb-2">
+              <a href="duvidas.html" class="text-decoration-none text-light">FAQ</a>
             </li>
           </ul>
         </div>
-      </div>
-    </nav>
 
-    <header class="tutorial-header">
-      <h1>Tutoriais Práticos</h1>
-      <h3 class="lead" >
-        Aprenda a dominar a tecnologia com tutoriais rápidos e simples. <br>Clique no que deseja aprender e comece agora!
-      </h3>
-    </header>
-
-    <div id="video-container" class="text-center my-4 d-none">
-  <div class="ratio ratio-16x9 mb-3">
-    <iframe id="video-frame" src="" title="Tutorial" allowfullscreen></iframe>
-  </div>
-  <button class="btn btn-outline-danger" onclick="fecharVideo()">
-    ❌ Fechar Tutorial
-  </button>
-</div>
-
-
-    <main class="container my-5">
-<div class="row g-4">
-  <!-- Tutorial 1 -->
-  <div class="col-md-4">
-    <div class="card tutorial-card">
-      <img src="images/tutorial/whatsapp-tuto.png" class="card-img-top" alt="Tutorial WhatsApp" />
-      <div class="card-body">
-        <h5 class="card-title tutorial-card-title">Como usar o WhatsApp</h5>
-        <p class="card-text tutorial-card-text">
-          Aprenda a enviar mensagens, fazer chamadas, enviar fotos e usar figurinhas no WhatsApp de forma simples.
-        </p>
-        <button class="btn tutorial-btn" onclick="carregarVideo('DG5sqJJubR0')">Ver Tutorial</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Tutorial 2 -->
-  <div class="col-md-4">
-    <div class="card tutorial-card">
-      <img src="images/tutorial/youtube-tuto.jpg" class="card-img-top" alt="Tutorial YouTube" />
-      <div class="card-body">
-        <h5 class="card-title tutorial-card-title">Como assistir vídeos no YouTube</h5>
-        <p class="card-text tutorial-card-text">
-          Descubra como procurar vídeos, assistir, se inscrever em canais e ativar legendas no YouTube.
-        </p>
-        <button class="btn tutorial-btn" onclick="carregarVideo('FyOF8AZip1o')">Ver Tutorial</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Tutorial 3 -->
-  <div class="col-md-4">
-    <div class="card tutorial-card">
-      <img src="images/tutorial/chatgpt-tuto.jpg" class="card-img-top" alt="Tutorial ChatGPT" />
-      <div class="card-body">
-        <h5 class="card-title tutorial-card-title">Como baixar e usar o ChatGPT</h5>
-        <p class="card-text tutorial-card-text">
-          Veja como baixar o aplicativo do ChatGPT, criar sua conta e começar a conversar com a inteligência artificial.
-        </p>
-        <button class="btn tutorial-btn" onclick="carregarVideo('mNUYSVJM0JM')">Ver Tutorial</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Tutorial 4 -->
-<div class="col-md-4">
-  <div class="card tutorial-card">
-    <img src="images/tutorial/googlemaps-tuto.jpg" class="card-img-top" alt="Tutorial Google Maps" />
-    <div class="card-body">
-      <h5 class="card-title tutorial-card-title">Como usar o Google Maps</h5>
-      <p class="card-text tutorial-card-text">
-        Descubra como usar o Google Maps para ver locais, traçar rotas, encontrar restaurantes e chegar ao seu destino com facilidade.
-      </p>
-      <button class="btn tutorial-btn" onclick="carregarVideo('8BnAjht1amA')">Ver Tutorial</button>
-    </div>
-  </div>
-</div>
-
-
-  <!-- Tutorial 5 -->
-<div class="col-md-4">
-  <div class="card tutorial-card">
-    <img src="images/tutorial/qrcode-tuto.jpg" class="card-img-top" alt="Tutorial QR Code" />
-    <div class="card-body">
-      <h5 class="card-title tutorial-card-title">Como escanear QR Code</h5>
-      <p class="card-text tutorial-card-text">
-        Aprenda de forma simples como usar a câmera do celular para escanear QR Codes em pagamentos, links, cardápios ou Wi-Fi.
-      </p>
-      <button class="btn tutorial-btn" onclick="carregarVideo('-KHRXNMc60E')">Ver Tutorial</button>
-    </div>
-  </div>
-</div>
-
-
-  <!-- Tutorial 6 -->
-  <div class="col-md-4">
-    <div class="card tutorial-card">
-      <img src="images/tutorial/senha-tuto.png" class="card-img-top" alt="Tutorial Senhas" />
-      <div class="card-body">
-        <h5 class="card-title tutorial-card-title">Como criar senhas seguras</h5>
-        <p class="card-text tutorial-card-text">
-          Aprenda dicas simples e práticas para criar senhas fortes, seguras e proteger suas contas na internet.
-        </p>
-        <button class="btn tutorial-btn" onclick="carregarVideo('DhXaVsnhhNM')">Ver Tutorial</button>
-      </div>
-    </div>
-  </div>
-</div>
-    </main>
-
-    <div class="text-center mb-5">
-      <a href="index.html" class="btn btn-primary btn-sm mt-3"
-        >← Voltar ao Início</a
-      >
-    </div>
-
-   <footer class="container-footer">
-      <div class="container">
-        <div class="row">
-          <!-- Sobre -->
-       <div class="col-md-4 mb-4">
-  <img src="images/icon-nav.png" alt="Logo Conectando Gerações" style="width: 80px;" class="mb-2" />
-  
-  <h5 class="fw-bold">Conectando Gerações</h5>
-  <p class="small">
-    Projeto Interdisciplinar de Inclusão Digital.<br />
-    Promovendo acessibilidade, inclusão e conexão através da tecnologia.
-  </p>
-</div>
-
-
-          <!-- Links úteis -->
-          <div class="col-md-4 mb-4">
-            <h6 class="fw-bold mb-3">Navegação</h6>
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <a href="index.html" class="text-decoration-none text-light">Início</a>
-              </li>
-              <li class="mb-2">
-                <a href="tutoriais.html" class="text-decoration-none text-light"
-                  >Tutoriais</a
-                >
-              </li>
-                            <li class="mb-2">
-                <a href="#conteudo" class="text-decoration-none text-light"
-                  >Jogos</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="duvidas.html"
-                  class="text-decoration-none text-light"
-                  >FAQ</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!-- Contato ou redes -->
-          <div class="col-md-4 mb-4">
-            <h6 class="fw-bold mb-3">Contato</h6>
-            <p class="small mb-1">Email: contato@conectandogeracoes.com</p>
-            <p class="small mb-3">Telefone: (99) 99999-9999</p>
-            <div>
-              <a href="#" class="text-light me-3">
-                <i class="bi bi-facebook"></i> Facebook
-              </a>
-              <a href="#" class="text-light me-3">
-                <i class="bi bi-instagram"></i> Instagram
-              </a>
-              <a href="#" class="text-light">
-                <i class="bi bi-whatsapp"></i> WhatsApp
-              </a>
-            </div>
+        <!-- Contato ou redes -->
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold mb-3">Contato</h6>
+          <p class="small mb-1">Email: contato@conectandogeracoes.com</p>
+          <p class="small mb-3">Telefone: (99) 99999-9999</p>
+          <div>
+            <a href="#" class="text-light me-3">
+              <i class="bi bi-facebook"></i> Facebook
+            </a>
+            <a href="#" class="text-light me-3">
+              <i class="bi bi-instagram"></i> Instagram
+            </a>
+            <a href="#" class="text-light">
+              <i class="bi bi-whatsapp"></i> WhatsApp
+            </a>
           </div>
         </div>
-
-        <hr class="border-secondary" />
-
-        <div class="text-center small">
-          © 2025 Conectando Gerações. Todos os direitos reservados.
-        </div>
       </div>
-    </footer>
 
-    <script src="js/script.js"></script>
-    <script src="js/acessibilidade.js"></script>
-    <script src="js/toolbaracess.js"></script>
-    <script src="js/config.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+      <hr class="border-secondary" />
+
+      <div class="text-center small">
+        © 2025 Conectando Gerações. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/acessibilidade.js"></script>
+  <script src="js/toolbaracess.js"></script>
+  <script src="js/config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>

@@ -46,7 +46,7 @@ body.tutorial-body {
 .tutorial-card {
   background-color: #fff;
   border: none;
-  border-radius: 16px;
+  border-radius: 6px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   min-height: 320px; /* ✅ Mantém altura mínima dos cards */

@@ -75,30 +75,29 @@ body {
 
 .nav-link {
   color: #333;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-  color:#fd771d;
-;
+  color: #fd771d;
 }
 
 .navbar-toggler {
   border: none;
+  background: transparent;
 }
 
 .navbar-toggler:focus {
   box-shadow: none;
 }
 
+/*animação suave para botões ao passar o mouse */
 .btn.btn-primary {
-  background-color: #007bff;
-  border: none;
-  transition: background-color 0.3s;
+  transition: transform 0.2s ease-in-out;
 }
 
 .btn.btn-primary:hover {
-  background-color: #0056b3;
+  transform: scale(1.05);
 }
 
 /*==============================
@@ -112,16 +111,25 @@ body {
 
   .navbar-nav .nav-item {
     width: 100%;
+    margin-bottom: 0.5rem; /* Espaço entre itens */
   }
 
-  .navbar-nav .nav-link,
-  .navbar-nav .btn {
+  .navbar-nav .nav-link {
     width: 100%;
     text-align: center;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
 
-  .btn.btn-primary {
-    padding: 0.5rem 1rem;
+  .navbar-nav .btn.btn-primary {
+    display: block;
+    width: 100%;
+    margin: 0.25rem 0;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
   }
 }
 
@@ -230,7 +238,7 @@ body.high-contrast {
 }
 
 h3{
-  color: #55504e !important;
+  color: #8a8a8a !important;
 
 }
 .hero-section h1 {
@@ -275,7 +283,7 @@ h3{
   z-index: 10;
 }
 
-.btn {
+.btn .navbar {
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s, background-color 0.2s;
   padding: 12px 16px;
@@ -474,21 +482,16 @@ body.high-contrast {
 .high-contrast .navbar .navbar-brand span.text-dark {
   color: #fff !important;
 }
+
 .high-contrast .navbar .navbar-brand img {
   border-color: #fff !important;
   background: #222 !important;
 }
+
 .high-contrast .navbar-nav .nav-link {
   color: #fff !important;
   background: transparent !important;
   text-shadow: none !important;
-}
-
-.high-contrast .btn-primary {
-  background: #ffe066 !important;
-  color: #222 !important;
-  border: 2px solid #ffe066 !important;
-  box-shadow: none !important;
 }
 
 .high-contrast .navbar-nav .nav-link.active,
@@ -498,22 +501,68 @@ body.high-contrast {
   color: #ffe066 !important;
   text-shadow: none !important;
 }
+
+/* Botões no modo High Contrast */
 .high-contrast .navbar .btn-primary {
   background: #ffe066 !important;
   color: #222 !important;
   border: 2px solid #ffe066 !important;
   box-shadow: none !important;
+  transition: all 0.2s ease-in-out;
 }
+
 .high-contrast .navbar .btn-primary:hover,
 .high-contrast .navbar .btn-primary:focus {
   background: #fff !important;
   color: #111 !important;
   border: 2px solid #fff !important;
 }
+
 .high-contrast .navbar-toggler {
   background: #222 !important;
   border: 2px solid #fff !important;
 }
+
+/* Responsividade ajustada para High Contrast */
+@media (max-width: 991.98px) {
+  .high-contrast .navbar-nav .nav-item {
+    margin-bottom: 0.5rem;
+  }
+
+  .high-contrast .navbar-nav .nav-link {
+    background: #222 !important;
+    color: #ffe066 !important;
+    border: 2px solid #ffe066 !important;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    margin: 0.25rem 0;
+  }
+
+  .high-contrast .navbar-nav .nav-link:hover,
+  .high-contrast .navbar-nav .nav-link:focus {
+    background: #ffe066 !important;
+    color: #222 !important;
+  }
+
+  .high-contrast .navbar .btn-primary {
+    width: 100%;
+    display: block;
+    margin: 0.25rem 0;
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+}
+
+
+.high-contrast .btn-primary {
+  background: #ffe066 !important;
+  color: #222 !important;
+  border: 2px solid #ffe066 !important;
+  box-shadow: none !important;
+}
+
 .high-contrast .container-footer {
   background-color: #000 !important;
   color: #fff !important;
@@ -526,32 +575,6 @@ body.high-contrast {
 
 .high-contrast .container-footer hr {
   border-color: #666 !important;
-}
-
-.high-contrast .login-card,
-.high-contrast .cadastro-card,
-.high-contrast .tutorial-card {
-  background-color: #121212 !important;
-  color: #ffffff !important;
-  border: 1px solid #333 !important;
-}
-
-.high-contrast .login-btn,
-.high-contrast .cadastro-btn,
-.high-contrast .tutorial-btn {
-  background-color: #ffe066 !important;
-  color: #000 !important;
-  border: none !important;
-}
-
-.high-contrast .tutorial-header {
-  background-color: #111 !important;
-  color: #fff !important;
-}
-
-.high-contrast .tutorial-card-title,
-.high-contrast .tutorial-card-text {
-  color: #fff !important;
 }
 
 /* Botão de Ajuda no modo contraste */
@@ -633,6 +656,47 @@ body.high-contrast {
 .modo-simples .navbar-toggler-icon {
   filter: brightness(0);
 }
+
+@media (max-width: 991.98px) {
+  .modo-simples .navbar-nav .nav-item {
+    margin-bottom: 0.5rem;
+  }
+
+  .modo-simples .navbar-nav .nav-link {
+    width: 100%;
+    text-align: center;
+    background-color: #f2f2f2 !important;
+    color: #222 !important;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin: 0.25rem 0;
+  }
+
+  .modo-simples .navbar-nav .nav-link:hover,
+  .modo-simples .navbar-nav .nav-link:focus {
+    background-color: #e0e0e0 !important;
+    text-decoration: underline;
+    color: #000 !important;
+  }
+
+  .modo-simples .navbar .btn-primary {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.75rem;
+    margin: 0.25rem 0;
+    background-color: #d6d6d6 !important;
+    color: #000 !important;
+    border: 1px solid #999 !important;
+    border-radius: 8px;
+  }
+
+  .modo-simples .navbar .btn-primary:hover {
+    background-color: #c4c4c4 !important;
+  }
+}
+
 
 .modo-simples .hero-section {
   background-color: #e0e0e0 !important;
