@@ -210,7 +210,7 @@ function toggleToolbar() {
     {
       label: "Fale Conosco",
       action: () =>
-        (window.location.href = "mailto:ConectandoGeracoes@gmail.com"),
+        (window.location.href = "mailto:thiagojorge14br@hotmail.com"),
     },
     {
       label: "Resetar Configurações",
